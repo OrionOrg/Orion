@@ -1,0 +1,180 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+body{	
+	padding: 0px;
+	margin: 0px;	 
+	background-image: url(../image/zzfw/bg.png);
+	background-repeat: no-repeat;
+}
+
+.zzdy_contaner{
+	margin: 0px;
+	padding: 0px;
+	height: auto;
+	width: auto;
+}
+.zzdy_main{
+	margin-left: 0px;
+	padding-left: 0px;	 	
+	height: auto;
+	width: auto; 
+}
+.zzdy_mainLeft{
+	width:430px;
+	float:left;	 
+	position: relative;
+}
+
+.zzdy_mainRight{	
+	float:left;	 
+	padding-left:20px;
+}
+
+/*
+ *以下导航样式
+*/
+.menu-nav{
+	border-left: 1px solid #760e2b;
+	margin-left: 20px;
+	padding-top: 214px;
+	width: 410px;
+}
+
+.menu-nav li{
+	position: relative;
+	list-style: none;
+	padding-left: 24px;
+	line-height: 32px;
+	margin-bottom: 20px;
+}
+
+.li_div{
+	height:50px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.menu-nav li a{
+	color: #ffffff;
+	text-decoration: none;
+	display: block;
+}
+.menu-nav li a.links{
+	font-weight:blod;
+	font-family: "Microsoft Yahei";
+	font-size: 18px;
+	color: #ffffff;
+	line-height: 50px;
+}
+.menu-nav li .num{
+	position: absolute;
+	left: -8px;
+	top: 15px;
+	height: 16px;
+	width: 25px;
+	background: url(../image/zzfw/num-bg.png) no-repeat;
+	color: #ffffff;
+	font-size: 12px;
+	text-indent: 4px;
+	line-height: 16px;
+}
+.menu-nav li ul{
+	border-left: 1px solid #760e2b;
+	margin-left: 10px;
+	/*padding: 10px 0 0 0;*/
+	margin-bottom: 30px;
+}
+.menu-nav li ul a{
+	color: #e5e5e5;
+	font-size: 16px;
+}
+.menu-nav li ul li{
+	background: url(../image/zzfw/li-bg.png) no-repeat left center;
+}
+.menu-nav li ul li.last{
+	background: url(../image/zzfw/li-bg.png) no-repeat left bottom;
+}
+.menu-nav li ul li.last a{
+	position: relative;
+	top: 16px;
+}
+.menu-nav li.last-one-floor{
+	margin-top: -25px;
+}
+.menu-nav li.last-one-floor .num{
+	top: 35px;
+}
+.menu-nav li.last-one-floor a.links{
+	top: 16px;
+	position: relative;
+}
+.menu-nav li.current a.links{
+	color: #000000;
+	text-indent: 15px;
+	background: url(../image/zzfw/li-current.png) no-repeat left bottom;
+}
+/*
+ *以上导航样式
+*/
+
+.timecount{
+	position: absolute;	
+	width: 411px;
+	height: 50px;	
+}
+
+.welcom_bottom{
+	position: absolute;	
+	width: 411px;
+	height: 99px;	
+}
+.zzdy_userInfo {
+	background-image: url(../image/zzfw/userInfo.png);
+	height: 220px;
+	width: 257px;
+	color:#ffffff;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 99999;
+	overflow: hidden;	 
+	clip: rect(auto,auto,auto,auto);
+}
+
+.zzdy_showxb{
+	margin-top:40px;	 
+}
+
+.zzdy_zzfwInfo{
+	margin-top:20px;
+}
+
+.zzdy_buttonContaner{
+	 position:absolute;
+	 width:450px;
+	 padding-left: 60px;
+}
+
+.zzdy_button{
+	height: 100px;
+	width: 100px;
+	float: left;
+	margin-left: 50px;
+	display: block;
+}
+
+.zzdy_button image{
+	height: 100px;
+	width: 100px;
+	border: 0px;
+	cursor: pointer;
+}
+
+.zzdy_clear {
+	clear: both;
+	height: 1px;
+	width: auto;
+}

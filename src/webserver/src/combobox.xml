@@ -1,0 +1,2050 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 选择范围配置 -->
+<SelectRanges>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>xslb</name>
+        <!-- 描述 -->
+        <description>学生类别</description>
+        <!-- 数据表名 -->
+        <table>t_xb_xslb</table>
+        <!-- 值字段名 -->
+        <value-column>xslbdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>xslbmc</label-column>
+        <!-- 级联定义 -->
+        <cascades>
+            <!-- 级联名称:级联字段 -->
+            <cascade>pyccm</cascade>
+        </cascades>
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>yxdm</name>
+        <!-- 描述 -->
+        <description>院系</description>
+        <!-- 数据表名 -->
+        <table>t_xb_dw</table>
+        <!-- 值字段名 -->
+        <value-column>yxdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>yxmc</label-column>
+        <order>yxdm desc  </order>
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>xslb2</name>
+        <!-- 描述 -->
+        <description>学生类别</description>
+        <!-- 数据表名 -->
+        <class-define>org.ratchetgx.orion.widgets.selectrange.impl.Xslb2</class-define>
+        <!-- 级联定义 -->
+        <cascades>
+            <!-- 级联名称 -->
+            <cascade>pyccm</cascade>
+        </cascades>
+    </SelectRange>	
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>pyjhxxxq</name>
+        <!-- 描述 -->
+        <description>培养计划学期</description>
+        <!-- 数据表名 -->
+        <table>t_pygl_pyjh_pyjhxxxq</table>
+        <!-- 值字段名 -->
+        <value-column>xqdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>xqmc</label-column>
+    </SelectRange>
+        
+    <SelectRange>
+        <!-- 名称 -->
+        <name>xqdm</name>
+        <!-- 描述 -->
+        <description>学期</description>
+        <!-- 数据表名 -->
+        <table>T_XB_XQ</table>
+        <!-- 值字段名 -->
+        <value-column>xqdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>xqmc</label-column>
+        <order>xqdm desc </order>
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>kkxqdm</name>
+        <!-- 描述 -->
+        <description>开课学期</description>
+        <!-- 数据表名 -->
+        <table>t_xb_pyxq</table>
+        <!-- 值字段名 -->
+        <value-column>pyxqdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>pyxqmc</label-column>
+    </SelectRange>	
+     
+    <SelectRange>
+        <!-- 名称 -->
+        <name>dbmszgh</name>
+        <!-- 描述 -->
+        <description>答辩秘书</description>
+        <!-- 数据表名 -->
+        <table>t_jzg_jbxx</table>
+        <!-- 值字段名 -->
+        <value-column>ZGH</value-column>
+        <!-- 显示字段名 -->
+        <label-column>XM</label-column>
+    </SelectRange>	
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>xqxx</name>
+        <!-- 描述 -->
+        <description>校区信息</description>
+        <!-- 数据表名 -->
+        <table>T_XB_XQXX</table>
+        <!-- 值字段名 -->
+        <value-column>xqdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>xqmc</label-column>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>yxdm</name>
+        <!-- 描述 -->
+        <description>校标单位</description>
+        <!-- 数据表名 -->
+        <table>T_XB_DW</table>
+        <!-- 值字段名 -->
+        <value-column>yxdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>yxmc</label-column>
+    </SelectRange>
+    
+     <SelectRange>
+        <name>xqmc</name>
+        <description>星期</description>
+        <pairs>
+            <pair key="1" value="星期一"/>
+            <pair key="2" value="星期二"/>
+            <pair key="3" value="星期三"/>
+            <pair key="4" value="星期四"/> 
+            <pair key="5" value="星期五"/> 
+            <pair key="6" value="星期六"/> 
+            <pair key="7" value="星期日"/>         
+        </pairs>
+    </SelectRange> 
+    
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>ksfs</name>
+        <!-- 描述 -->
+        <description>考试方式</description>
+        <!-- 数据表名 -->
+        <table>t_bzhb_ksfs</table>
+        <!-- 值字段名 -->
+        <value-column>ksfsdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>ksfsmc</label-column>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>zsksfs</name>
+        <!-- 描述 -->
+        <description>招生考试方式</description>
+        <!-- 数据表名 -->
+        <table>T_BZHB_ZSKSFS</table>
+        <!-- 值字段名 -->
+        <value-column>ksfsdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>ksfsmc</label-column>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>xxxs</name>
+        <!-- 描述 -->
+        <description>学习形式</description>
+        <!-- 数据表名 -->
+        <table>T_BZHB_XXXS</table>
+        <!-- 值字段名 -->
+        <value-column>xxxsdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>xxxsmc</label-column>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>xxfs</name>
+        <!-- 描述 -->
+        <description>学习方式</description>
+        <!-- 数据表名 -->
+        <table>T_BZHB_XXFS</table>
+        <!-- 值字段名 -->
+        <value-column>xxfsdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>xxfsmc</label-column>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>xw</name>
+        <!-- 描述 -->
+        <description>学位</description>
+        <!-- 数据表名 -->
+        <table>T_BZHB_XW</table>
+        <!-- 值字段名 -->
+        <value-column>xwm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>xwmc</label-column>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>xsly</name>
+        <!-- 描述 -->
+        <description>学生来源</description>
+        <!-- 数据表名 -->
+        <table>T_BZHB_XSLY</table>
+        <!-- 值字段名 -->
+        <value-column>xslydm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>xslymc</label-column>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>rxfs</name>
+        <!-- 描述 -->
+        <description>入学方式</description>
+        <!-- 数据表名 -->
+        <table>T_BZHB_RXFS</table>
+        <!-- 值字段名 -->
+        <value-column>rxfsdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>rxfsmc</label-column>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>lqlb</name>
+        <!-- 描述 -->
+        <description>录取类别</description>
+        <!-- 数据表名 -->
+        <table>T_BZHB_LQLB</table>
+        <!-- 值字段名 -->
+        <value-column>lqlbdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>lqlbmc</label-column>
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>zxjh</name>
+        <!-- 描述 -->
+        <description>专项计划</description>
+        <!-- 数据表名 -->
+        <table>T_XB_ZXJH</table>
+        <!-- 值字段名 -->
+        <value-column>ZXJHDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>ZXJHMC</label-column>
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>njdm</name>
+        <!-- 描述 -->
+        <description>年级代码</description>
+        <!-- 数据表名 -->
+        <table>T_XB_ND</table>
+        <!-- 值字段名 -->
+        <value-column>nd</value-column>
+        <!-- 显示字段名 -->
+        <label-column>nd||'级'</label-column>
+        <order>nd desc  </order>
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>xbdm</name>
+        <!-- 描述 -->
+        <description>性别代码</description>
+        <!-- 数据表名 -->
+        <table>T_BZGB_XB</table>
+        <!-- 值字段名 -->
+        <value-column>xbdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>xbmc</label-column>
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>mzdm</name>
+        <!-- 描述 -->
+        <description>民族代码</description>
+        <!-- 数据表名 -->
+        <table>T_BZGB_MZ</table>
+        <!-- 值字段名 -->
+        <value-column>mzdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>mzmc</label-column>
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>zzmm</name>
+        <!-- 描述 -->
+        <description>政治面貌</description>
+        <!-- 数据表名 -->
+        <table>T_BZGB_ZZMM</table>
+        <!-- 值字段名 -->
+        <value-column>zzmmdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>zzmmmc</label-column>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>zjlx</name>
+        <!-- 描述 -->
+        <description>证件类型</description>
+        <!-- 数据表名 -->
+        <table>T_BZHB_ZJLX</table>
+        <!-- 值字段名 -->
+        <value-column>zjlxdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>zjlxmc</label-column>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>hyzk</name>
+        <!-- 描述 -->
+        <description>婚姻状况</description>
+        <!-- 数据表名 -->
+        <table>T_BZGB_HYZK</table>
+        <!-- 值字段名 -->
+        <value-column>hyzkdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>hyzkmc</label-column>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>zyfx</name>
+        <!-- 描述 -->
+        <description>专业方向</description>
+        <!-- 数据表名 -->
+        <table>T_XB_ZYFX</table>
+        <!-- 值字段名 -->
+        <value-column>zyfxdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>zyfxmc</label-column>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>zydm</name>
+        <!-- 描述 -->
+        <description>专业代码</description>
+        <!-- 数据表名 -->
+        <table>V_XB_YXYJSZY</table>
+        <!-- 值字段名 -->
+        <value-column>zydm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>zymc</label-column>
+        <!-- 级联定义 -->
+        <cascades>
+            <!-- 级联名称 -->
+            <cascade>yxdm</cascade>
+        </cascades>
+    </SelectRange>
+	
+	 <SelectRange>
+        <!-- 名称 -->
+        <name>bjdm</name>
+        <!-- 描述 -->
+        <description>班级代码</description>
+        <!-- 数据表名 -->
+        <table>t_xjgl_xsrx_bjjbxx</table>
+        <!-- 值字段名 -->
+        <value-column>bjdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>bjdm</label-column>
+        <!-- 级联定义 -->
+        <cascades>
+            <!-- 级联名称 -->
+            <cascade>nd</cascade>
+        </cascades>
+        <!-- 级联定义 -->
+        <cascades>
+            <!-- 级联名称 -->
+           <cascade>yxdm</cascade>
+        </cascades>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>xjzt</name>
+        <!-- 描述 -->
+        <description>学籍状态</description>
+        <!-- 数据表名 -->
+        <table>T_BZHB_XJZT</table>
+        <!-- 值字段名 -->
+        <value-column>xjztdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>xjztmc</label-column>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>jdfs</name>
+        <!-- 描述 -->
+        <description>就读方式</description>
+        <!-- 数据表名 -->
+        <table>T_BZHB_JDFS</table>
+        <!-- 值字段名 -->
+        <value-column>jdfsdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>jdfsmc</label-column>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>pyfs</name>
+        <!-- 描述 -->
+        <description>培养方式</description>
+        <!-- 数据表名 -->
+        <table>T_BZHB_PYFS</table>
+        <!-- 值字段名 -->
+        <value-column>pyfsdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>pyfsmc</label-column>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>pyfalx</name>
+        <!-- 描述 -->
+        <description>培养方案类型</description>
+        <!-- 数据表名 -->
+        <table>t_pygl_pyfa_pyfalx</table>
+        <!-- 值字段名 -->
+        <value-column>pyfalxdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>pyfalxmc</label-column>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>xz</name>
+        <!-- 描述 -->
+        <description>学制</description>
+        <!-- 数据表名 -->
+        <table>T_XB_XZDM</table>
+        <!-- 值字段名 -->
+        <value-column>xzdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>xzmc</label-column>
+    </SelectRange>
+        
+    <SelectRange>
+        <!-- 名称 -->
+        <name>gjdq</name>
+        <!-- 描述 -->
+        <description>国家地区</description>
+        <!-- 数据表名 -->
+        <table>t_bzgb_gjdq</table>
+        <!-- 值字段名 -->
+        <value-column>gjdqdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>gjdqjc</label-column>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>xldm</name>
+        <!-- 描述 -->
+        <description>学历代码</description>
+        <!-- 数据表名 -->
+        <table>T_BZHB_XL</table>
+        <!-- 值字段名 -->
+        <value-column>xldm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>xlmc</label-column>
+    </SelectRange>
+    
+     <SelectRange>
+        <!-- 名称 -->
+        <name>xlm</name>
+        <!-- 描述 -->
+        <description>研究生学历码</description>
+        <!-- 数据表名 -->
+        <table>T_XB_XL</table>
+        <!-- 值字段名 -->
+        <value-column>xldm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>xlmc</label-column>
+    </SelectRange>
+    
+     <SelectRange>
+        <!-- 名称 -->
+        <name>qzxlm</name>
+        <!-- 描述 -->
+        <description>前置学历码</description>
+        <!-- 数据表名 -->
+        <table>T_BYXW_XWSY_SBQZXL</table>
+        <!-- 值字段名 -->
+        <value-column>SBQZXLDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>SBQZXLMC</label-column>
+    </SelectRange>
+    
+        
+    <SelectRange>
+        <!-- 名称 -->
+        <name>jxxz</name>
+        <!-- 描述 -->
+        <description>进修性质</description>
+        <!-- 数据表名 -->
+        <table>T_BZHB_JXXZ</table>
+        <!-- 值字段名 -->
+        <value-column>jxxzdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>jxxzmc</label-column>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>gat</name>
+        <!-- 描述 -->
+        <description>港澳台</description>
+        <!-- 数据表名 -->
+        <table>T_BZHB_GATQ</table>
+        <!-- 值字段名 -->
+        <value-column>gatqdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>gatqmc</label-column>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>gbzwmc</name>
+        <!-- 描述 -->
+        <description>干部职务名称</description>
+        <!-- 数据表名 -->
+        <table>T_BZGB_GBZWMC</table>
+        <!-- 值字段名 -->
+        <value-column>gbzwmcdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>gbzwmcmc</label-column>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>jtgx</name>
+        <!-- 描述 -->
+        <description>家庭关系</description>
+        <!-- 数据表名 -->
+        <table>T_BZGB_JTGX</table>
+        <!-- 值字段名 -->
+        <value-column>jtgxdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>jtgxmc</label-column>
+    </SelectRange>
+	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>zyjszw</name>
+        <!-- 描述 -->
+        <description>专业技术职务</description>
+        <!-- 数据表名 -->
+        <table>T_BZGB_ZYJSZW_PX</table>
+        <!-- 值字段名 -->
+        <value-column>ZYJSZWDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>ZYJSZWMC</label-column>
+        <order>PX ASC</order>
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>ksxz</name>
+        <!-- 描述 -->
+        <description>考试性质</description>
+        <!-- 数据表名 -->
+        <table>T_BZHB_KSXZ</table>
+        <!-- 值字段名 -->
+        <value-column>xzdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>xzmc</label-column>
+        <!-- 过滤语句 -->
+        <filter>lrsfxs=1</filter>
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>skfs</name>
+        <!-- 描述 -->
+        <description>授课方式</description>
+        <!-- 数据表名 -->
+        <table>t_bzhb_skfs</table>
+        <!-- 值字段名 -->
+        <value-column>skfsdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>skfsmc</label-column>
+    </SelectRange>
+     
+    <SelectRange>
+        <!-- 名称 -->
+        <name>yddl</name>
+        <!-- 描述 -->
+        <description>异动大类</description>
+        <!-- 数据表名 -->
+        <class-define>org.ratchetgx.orion.widgets.selectrange.impl.yjs.Yddl_New</class-define>
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>ydxl</name>
+        <!-- 描述 -->
+        <description>异动小类</description>
+        <!-- 数据表名 -->
+        <class-define>org.ratchetgx.orion.widgets.selectrange.impl.yjs.Ydxl_New</class-define>
+        <!-- 级联定义 -->
+        <cascades>
+            <!-- 级联名称 -->
+            <cascade>yddl</cascade>
+        </cascades>
+    </SelectRange>
+	
+    <SelectRange>
+        <name>sf</name>
+        <description>是否</description>
+        <pairs>
+            <pair key="1" value="是"/>
+            <pair key="0" value="否"/>
+        </pairs>
+    </SelectRange>
+    
+     <SelectRange>
+        <name>sfxwcy</name>
+        <description>是否</description>
+        <pairs>
+            <pair key="1" value="校本部专家"/>
+            <pair key="2" value="医学院及附属医院"/>
+            <pair key="0" value="校外专家"/>
+        </pairs>
+    </SelectRange>
+    
+     <SelectRange>
+        <name>sfbd</name>
+        <description>是否博导</description>
+        <pairs>
+            <pair key="1" value="博士学位"/>
+            <pair key="0" value="非博士学位"/>
+        </pairs>
+    </SelectRange>
+    
+    <SelectRange>
+        <name>yw</name>
+        <description>有无</description>
+        <pairs>
+            <pair key="1" value="有"/>
+            <pair key="0" value="无"/>
+        </pairs>
+    </SelectRange>
+    
+    <SelectRange>
+        <name>sfjs</name>
+        <description>是否接收</description>
+        <pairs>
+            <pair key="1" value="已接收"/>
+            <pair key="0" value="未接收"/>
+        </pairs>
+    </SelectRange>
+    
+    <SelectRange>
+        <name>pyjg</name>
+        <description>评阅结果</description>
+        <pairs>
+            <pair key="1" value="同意"/>
+            <pair key="0" value="不同意"/>
+        </pairs>
+    </SelectRange>
+	
+    <SelectRange>
+        <name>pyccm</name>
+        <description>培养层次</description>
+        <pairs>
+            <pair key="1" value="博士"/>
+            <pair key="2" value="硕士"/>
+        </pairs>
+    </SelectRange>
+	
+    <SelectRange>
+        <name>rxjj</name>
+        <description>入学季节</description>
+        <pairs>
+            <pair key="1" value="秋季入学"/>
+            <pair key="2" value="春季入学"/>
+        </pairs>
+    </SelectRange>
+	
+    <SelectRange>
+        <name>zczt</name>
+        <description>注册状态</description>
+        <pairs>
+            <pair key="1" value="已注册"/>
+            <pair key="0" value="未注册"/>
+        </pairs>
+    </SelectRange>
+    
+    <SelectRange>
+        <name>lxbz</name>
+        <description>离校标志</description>
+        <pairs>
+            <pair key="0" value="在校"/>
+            <pair key="2" value="不在校"/>
+            <pair key="1" value="离校"/>
+        </pairs>
+    </SelectRange>
+    
+    <SelectRange>
+        <name>hssxwfs</name>
+        <description>获硕士学位方式</description>
+        <pairs>
+            <pair key="1" value="学历教育"/>
+            <pair key="2" value="非学历教育(申请学位)"/>
+        </pairs>
+    </SelectRange>
+    
+    <SelectRange>
+        <name>xjyd_shzt</name>
+        <description>学籍异动审核状态</description>
+        <pairs>
+            <pair key="0" value="草稿"/>
+            <pair key="1" value="待院系审核"/>
+            <pair key="2" value="待研究生院审核"/>
+            <pair key="8" value="审核通过待更新"/>
+            <pair key="9" value="审核通过"/>
+        </pairs>
+    </SelectRange>
+    
+    <SelectRange>
+        <name>lwzqjc_shzt</name>
+        <description>论文中期检查审核状态</description>
+        <pairs>
+            <pair key="0" value="草稿"/>
+            <pair key="1" value="待审核"/>
+            <pair key="9" value="审核通过"/>
+        </pairs>
+    </SelectRange>
+    
+    <SelectRange>
+        <name>bzlb</name>
+        <description>编制类别</description>
+        <pairs>
+            <pair key="0" value="全职"/>
+            <pair key="1" value="兼职"/>
+        </pairs>
+    </SelectRange>
+    
+    <SelectRange>
+        <name>jzglbm</name>
+        <description>教职工类别</description>
+        <pairs>
+            <pair key="0" value="讲师"/>
+            <pair key="1" value="副教授"/>
+            <pair key="2" value="教授"/>
+        </pairs>
+    </SelectRange>
+    
+    <SelectRange>
+        <name>jspylb</name>
+        <description>教师聘用类别</description>
+        <pairs>
+            <pair key="1" value="本校"/>
+            <pair key="2" value="外聘"/>
+        </pairs>
+    </SelectRange>
+    
+     <SelectRange>
+        <!-- 名称 -->
+        <name>zblx</name>
+        <!-- 描述 -->
+        <description>博生招生指标类型</description>
+        <!-- 数据表名 -->
+        <table>T_XB_ZBLX</table>
+        <!-- 值字段名 -->
+        <value-column>zblxdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>zblxmc</label-column>        
+    </SelectRange>
+    
+     <SelectRange>
+        <!-- 名称 -->
+        <name>dbcylb</name>
+        <!-- 描述 -->
+        <description>答辩成员类别</description>
+        <!-- 数据表名 -->
+        <table>T_BYXW_XWTL_WYZW</table>
+        <!-- 值字段名 -->
+        <value-column>zwbh</value-column>
+        <!-- 显示字段名 -->
+        <label-column>zwmc</label-column> 
+        <!-- 过滤语句 -->
+        <filter> jglx = 1</filter>       
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>rkzk</name>
+        <!-- 描述 -->
+        <description>任课状况</description>
+        <!-- 数据表名 -->
+        <table>T_BZHB_RKZK</table>
+        <!-- 值字段名 -->
+        <value-column>rkzkdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>rkzkmc</label-column>     
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>lwmj</name>
+        <!-- 描述 -->
+        <description>论文密级</description>
+        <!-- 数据表名 -->
+        <table>T_BZHB_MJ</table>
+        <!-- 值字段名 -->
+        <value-column>mjdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>mjmc</label-column>     
+    </SelectRange>
+    
+    <SelectRange>
+        <name>lwydb_shzt</name>
+        <description>论文预答辩审核状态</description>
+        <pairs>
+            <pair key="-1" value="审核不通过"/>
+            <pair key="0" value="草稿"/>
+            <pair key="1" value="待审核"/>  
+            <pair key="9" value="审核通过"/>
+        </pairs>
+    </SelectRange>
+    
+    <SelectRange>
+        <name>lwydb_sftg</name>
+        <description>论文预答辩是否通过</description>
+        <pairs>            
+            <pair key="1" value="合格"/>
+            <pair key="2" value="基本合格"/>  
+            <pair key="-1" value="不合格"/>
+        </pairs>
+    </SelectRange>
+    
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>lwlx</name>
+        <!-- 描述 -->
+        <description>论文类型</description>
+        <!-- 数据表名 -->
+        <table>T_XB_LWLX</table>
+        <!-- 值字段名 -->
+        <value-column>lwlxdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>lwlxmc</label-column>     
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>lwyz</name>
+        <!-- 描述 -->
+        <description>论文语种</description>
+        <!-- 数据表名 -->
+        <table>T_BYXW_DBGL_LWYZ</table>
+        <!-- 值字段名 -->
+        <value-column>lwyzdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>lwyzmc</label-column>   
+        <order>PX ASC</order>  
+    </SelectRange>
+    
+     <SelectRange>
+        <name>fbhlr</name>
+        <description>发表或录入情况</description>
+        <pairs>
+            <pair key="1" value="发表"/>
+            <pair key="2" value="录入"/>  
+            <pair key="3" value="投寄"/>  
+        </pairs>
+    </SelectRange>  
+    
+     <SelectRange>
+        <!-- 名称 -->
+        <name>xwkwdj</name>
+        <!-- 描述 -->
+        <description>刊物等级</description>
+        <!-- 数据表名 -->
+        <table>T_BYXW_DBGL_KWDJ</table>
+        <!-- 值字段名 -->
+        <value-column>kwdjdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>kwdjmc </label-column>     
+    </SelectRange>
+    
+     <SelectRange>
+        <!-- 名称 -->
+        <name>jljb</name>
+        <!-- 描述 -->
+        <description>奖励级别</description>
+        <!-- 数据表名 -->
+        <table>T_BYXW_DBGL_JLJB</table>
+        <!-- 值字段名 -->
+        <value-column>jljbdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>jljbmc </label-column>     
+    </SelectRange>
+    
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>lwxtly</name>
+        <!-- 描述 -->
+        <description>论文选题来源</description>
+        <!-- 数据表名 -->
+        <table>T_XB_LWXTLY</table>
+        <!-- 值字段名 -->
+        <value-column>lwxtlydm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>lwxtlymc</label-column>     
+    </SelectRange>
+    
+    <SelectRange>
+        <name>lwkt_sftg</name>
+        <description>是否通过</description>
+        <pairs>
+            <pair key="0" value="未通过"/>
+            <pair key="1" value="通过"/>  
+        </pairs>
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>lwkt_shzt</name>
+        <!-- 描述 -->
+        <description>论文开题审核状态</description>
+        <!-- 数据表名 -->
+        <table>T_GGGL_LCCZGL_LCKZPZ</table>
+        <!-- 值字段名 -->
+        <value-column>ZTDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>ZTMC</label-column> 
+        <!-- 过滤语句 -->
+        <filter> YWDXMC='V_BYXW_DBGL_LWKTBG'</filter>    
+    </SelectRange>
+    
+    <SelectRange>
+        <name>sfxnwzj</name>
+        <description>是否校内外专家</description>
+        <pairs>
+            <pair key="0" value="否"/>
+            <pair key="1" value="校内专家"/>
+            <pair key="2" value="校外专家"/>
+        </pairs>
+    </SelectRange>
+    
+    <SelectRange>
+        <name>sfsbd</name>
+        <description>是否硕博导</description>
+        <pairs>
+            <pair key="0" value="否"/>
+            <pair key="1" value="博导"/>
+            <pair key="2" value="硕导"/>
+        </pairs>
+    </SelectRange>
+    
+    <SelectRange>
+        <name>xscj_xwlb</name>
+        <description>学位类别</description>
+        <pairs>
+            <pair key="3" value="科学学位硕士"/>
+            <pair key="4" value="同等学力硕士"/>
+            <pair key="5" value="专业学位硕士"/>
+            <pair key="6" value="科学学位博士"/>
+            <pair key="7" value="同等学力博士"/>
+            <pair key="8" value="专业学位博士"/>
+        </pairs>
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>xwmc</name>
+        <!-- 描述 -->
+        <description>学位类别代码</description>
+        <!-- 数据表名 -->
+        <table>T_BZGB_XW</table>
+        <!-- 值字段名 -->
+        <value-column>xwdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>xwmc</label-column>     
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>xscj_xwlx</name>
+        <!-- 描述 -->
+        <description>申请学位类型</description>
+        <!-- 数据表名 -->
+        <table>T_XB_XWLX</table>
+        <!-- 值字段名 -->
+        <value-column>XWLXDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>XWLXMC</label-column>     
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>xscj_zyxwlb</name>
+        <!-- 描述 -->
+        <description>专业学位类别</description>
+        <!-- 数据表名 -->
+        <table>T_XKJS_XKXXGL_ZYXWLBXX</table>
+        <!-- 值字段名 -->
+        <value-column>ZYXWLBDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>ZYXWLBMC</label-column>     
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>xscj_lwdj</name>
+        <!-- 描述 -->
+        <description>论文评定等级</description>
+        <!-- 数据表名 -->
+        <table>T_BYXW_LWCJGL_LWDJZD</table>
+        <!-- 值字段名 -->
+        <value-column>DJDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>DJMC</label-column>     
+    </SelectRange>
+    <!--
+    <SelectRange>
+        
+        <name>xscj_xwlwlb</name>
+        
+        <description>学位论文类别</description>
+        
+        <table>T_BYXW_LWCJGL_ZYXWLWLB</table>
+        
+        <value-column>LWLBID</value-column>
+        
+        <label-column>XWLWLBMC</label-column>     
+    </SelectRange>
+    -->
+    <SelectRange>
+        <!-- 名称 -->
+        <name>xscj_xwlwlb</name>
+        <!-- 描述 -->
+        <description>学位论文类别</description>
+        <!-- 数据表名 -->
+        <class-define>org.ratchetgx.orion.widgets.selectrange.impl.yjs.Xwlwlbxx</class-define>
+        <!-- 级联定义 -->
+        <cascades>
+            <!-- 级联名称 -->
+            <cascade>zyxwlb</cascade>
+        </cascades>
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>lwcj_shzt</name>
+        <!-- 描述 -->
+        <description>论文抽检审核状态</description>
+        <!-- 数据表名 -->
+        <table>T_GGGL_LCCZGL_LCKZPZ</table>
+        <!-- 值字段名 -->
+        <value-column>ZTDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>ZTMC</label-column> 
+        <!-- 过滤语句 -->
+        <filter> YWDXMC='V_BYXW_LWCJGL_XSCJSQB'</filter>    
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>qk</name>
+        <!-- 描述 -->
+        <description>期刊</description>
+        <!-- 数据表名 -->
+        <table>T_BYXW_DBGL_XSLWQK</table>
+        <!-- 值字段名 -->
+        <value-column>QKDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>QKMC</label-column>     
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>kwdj</name>
+        <!-- 描述 -->
+        <description>期刊级别</description>
+        <!-- 数据表名 -->
+        <table>T_BYXW_DBGL_QKJB</table>
+        <!-- 值字段名 -->
+        <value-column>qkjbdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>qkjbmc</label-column>     
+    </SelectRange>
+    
+    <SelectRange>
+        <name>xslw_shzt</name>
+        <description>学术论文审核状态</description>
+        <pairs>
+            <pair key="0" value="草稿"/>
+            <pair key="1" value="待审核"/>
+            <pair key="9" value="审核通过"/>
+            <pair key="-9" value="审核不通过"/>            
+        </pairs>
+    </SelectRange>  
+    
+     <SelectRange>
+        <name>xslw_sfsy</name>
+        <description>是否授予学位</description>
+        <pairs>
+            <pair key="0" value="未授予"/>
+            <pair key="1" value="已授予"/>
+        </pairs>
+    </SelectRange>    
+    
+    <SelectRange>
+        <name>lwzxpy_shzt</name>
+        <description>论文在线评阅审核状态</description>
+        <pairs>
+            <pair key="0" value="草稿"/>
+            <pair key="1" value="待审核"/>
+            <pair key="9" value="审核通过"/>
+            <pair key="-1" value="审核不通过"/>  
+            <pair key="2" value="待院系审核"/>            
+        </pairs>
+    </SelectRange>  
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>ssdw</name>
+        <!-- 描述 -->
+        <description>送审单位</description>
+        <!-- 数据表名 -->
+        <table>T_BYXW_LWPYGL_SSDW</table>
+        <!-- 值字段名 -->
+        <value-column>DWDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>DWMC</label-column>     
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>ssdwyx</name>
+        <!-- 描述 -->
+        <description>送审单位院系</description>
+        <!-- 数据表名 -->
+        <table>T_BYXW_LWPYGL_SSDWYX</table>
+        <!-- 值字段名 -->
+        <value-column>YXDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>YXMC</label-column>     
+    </SelectRange>
+    
+    <SelectRange>
+        <name>lwzxpy_sslx</name>
+        <description>论文在线评阅送审类型</description>
+        <pairs>
+            <pair key="1" value="明审"/>
+            <pair key="2" value="盲审"/>                      
+        </pairs>
+    </SelectRange>  
+    
+    <SelectRange>
+        <name>lwzxpy_pyjg</name>
+        <description>论文在线评阅评阅结果</description>
+        <pairs>
+            <pair key="1" value="通过"/>
+            <pair key="0" value="不通过"/>                      
+        </pairs>
+    </SelectRange>  
+    
+    <SelectRange>
+        <name>lwzxpy_fylx</name>
+        <description>论文在线评阅复议类型</description>
+        <pairs>
+          	<pair key="-1" value="无复议"/>
+            <pair key="1" value="复议"/>
+            <pair key="2" value="复议申诉"/> 
+        </pairs>
+    </SelectRange> 
+    
+    <SelectRange>
+        <name>fysq_shzt</name>
+        <description>复议申请状态</description>
+        <pairs>
+            <pair key="0" value="草稿"/>
+            <pair key="1" value="待审核"/>
+            <pair key="9" value="审核通过"/>
+            <pair key="-9" value="审核不通过"/>            
+        </pairs>
+    </SelectRange> 
+    
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>yjxkdm</name>
+        <!-- 描述 -->
+        <description>一级学科</description>
+        <!-- 数据表名 -->
+        <table>V_XKJS_XKXXGL_YJXKXX</table>
+        <!-- 值字段名 -->
+        <value-column>YJXKDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>YJXKMC</label-column>   
+        <!-- 级联定义 -->
+        <cascades>
+            <!-- 级联名称 -->
+            <cascade>yxdm</cascade>
+        </cascades>    
+    </SelectRange>
+    
+    <SelectRange>
+        <name>zjgs</name>
+        <description>专家归属</description>
+        <pairs>
+            <pair key="1" value="本校"/>
+            <pair key="2" value="外校"/>                 
+        </pairs>
+    </SelectRange> 
+    
+    <SelectRange>
+        <name>lwpyzt</name>
+        <description>论文评阅状态</description>
+        <pairs>
+            <pair key="0" value="未评阅"/>
+            <pair key="1" value="评阅中"/>
+            <pair key="2" value="已评阅"/>                 
+        </pairs>
+    </SelectRange> 
+        
+    <SelectRange>
+        <!-- 名称 -->
+        <name>kcccdm</name>
+        <!-- 描述 -->
+        <description>课程层次</description>
+        <!-- 数据表名 -->
+        <table>T_PYGL_PYFA_KCCC</table>
+        <!-- 值字段名 -->
+        <value-column>KCCCDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>KCCCMC</label-column>     
+    </SelectRange>   
+    
+    <SelectRange>
+        <name>kcfl</name>
+        <description>课程分类</description>
+        <pairs>
+            <pair key="1" value="全日制课程"/>
+            <pair key="0" value="非全日制课程"/>
+        </pairs>
+     </SelectRange>
+     
+	 <SelectRange>
+        <name>kcfl2</name>
+        <description>课程类型</description>
+        <pairs>
+            <pair key="1" value="第一外语课"/>
+            <pair key="2" value="政治课"/>
+            <pair key="3" value="必修环节"/>
+            <pair key="4" value="其他"/>
+        </pairs>
+	 </SelectRange>
+	 
+	 <SelectRange>
+        <name>kcxz</name>
+        <description>课程性质</description>
+        <pairs>
+            <pair key="0" value="公共课"/>
+            <pair key="1" value="专业课"/>
+        </pairs>
+	 </SelectRange>
+	 
+	 <SelectRange>
+        <!-- 名称 -->
+        <name>kclbdm</name>
+        <!-- 描述 -->
+        <description>课程类型</description>
+        <!-- 数据表名 -->
+        <table>T_PYGL_PYFA_KCLB</table>
+        <!-- 值字段名 -->
+        <value-column>KCLBDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>KCLBMC</label-column>     
+	</SelectRange>   
+
+    <SelectRange>
+      <name>kcshzt</name>
+      <description>课程申请审核状态</description>
+      <pairs>
+          <pair key="0" value="草稿"/>
+          <pair key="1" value="待分委会讨论"/>
+          <pair key="2" value="待培养办审核"/>  
+          <pair key="9" value="审核通过"/>
+          <pair key="-1" value="审核不通过"/>
+      </pairs>
+  	</SelectRange>
+  	
+    <SelectRange>
+        <!-- 名称 -->
+        <name>dsjg</name>
+        <!-- 描述 -->
+        <description>导师籍贯</description>
+        <!-- 数据表名 -->
+        <table>V_XB_JGDM</table>
+        <!-- 值字段名 -->
+        <value-column>JGDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>JGMC</label-column>     
+    </SelectRange>  
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>dszjlb</name>
+        <!-- 描述 -->
+        <description>导师专家类别</description>
+        <!-- 数据表名 -->
+        <table>T_XKJS_DSGL_ZJLB</table>
+        <!-- 值字段名 -->
+        <value-column>ZJLBDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>ZJLBMC</label-column>     
+    </SelectRange> 
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>dsfblb</name>
+        <!-- 描述 -->
+        <description>导师发表类别</description>
+        <!-- 数据表名 -->
+        <table>T_XKJS_DSGL_FBLB</table>
+        <!-- 值字段名 -->
+        <value-column>FBLBDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>FBLBMC</label-column>     
+  </SelectRange>
+  
+   <SelectRange>
+        <!-- 名称 -->
+        <name>dssllb</name>
+        <!-- 描述 -->
+        <description>导师收录类别</description>
+        <!-- 数据表名 -->
+        <table>T_XKJS_DSGL_SLLB</table>
+        <!-- 值字段名 -->
+        <value-column>SLLBDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>SLLBMC</label-column>     
+  </SelectRange>
+  
+  <SelectRange>
+        <!-- 名称 -->
+        <name>brsmcx</name>
+        <!-- 描述 -->
+        <description>本人署名次序</description>
+        <pairs>
+            <pair key="1" value="1"/>
+            <pair key="2" value="2"/>
+            <pair key="3" value="3"/>
+            <pair key="4" value="4"/>
+            <pair key="5" value="5"/>
+            <pair key="6" value="6"/> 
+            <pair key="7" value="7"/>
+            <pair key="8" value="8"/>
+            <pair key="9" value="9"/>
+            <pair key="10" value="10"/>
+        </pairs> 
+  </SelectRange>
+  
+   <SelectRange>
+        <!-- 名称 -->
+        <name>xmlb</name>
+        <!-- 描述 -->
+        <description>项目类别</description>
+        <pairs>
+            <pair key="1" value="横向"/>
+            <pair key="2" value="纵向"/>
+        </pairs> 
+  </SelectRange>
+  
+   <SelectRange>
+        <!-- 名称 -->
+        <name>xmly</name>
+        <!-- 描述 -->
+        <description>项目来源</description>
+        <!-- 数据表名 -->
+        <table>T_XKJS_DSGL_KYXMLY</table>
+        <!-- 值字段名 -->
+        <value-column>XMLYDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>XMLYMC</label-column>     
+  </SelectRange>
+  
+   <SelectRange>
+        <!-- 名称 -->
+        <name>xmjb</name>
+        <!-- 描述 -->
+        <description>项目级别</description>
+        <pairs>
+            <pair key="1" value="国家级"/>
+            <pair key="2" value="省部级"/>
+        </pairs> 
+  </SelectRange>
+  
+   <SelectRange>
+        <!-- 名称 -->
+        <name>wcqk</name>
+        <!-- 描述 -->
+        <description>项目完成情况</description>
+        <!-- 数据表名 -->
+        <table>T_XKJS_DSGL_WCQK</table>
+        <!-- 值字段名 -->
+        <value-column>WCQKDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>WCQKMC</label-column>     
+  </SelectRange>
+  
+  <SelectRange>
+        <!-- 名称 -->
+        <name>zzlb</name>
+        <!-- 描述 -->
+        <description>著作类别</description>
+        <!-- 数据表名 -->
+        <table>T_XKJS_DSGL_ZZLB</table>
+        <!-- 值字段名 -->
+        <value-column>ZZLBDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>ZZLBMC</label-column>     
+  </SelectRange> 
+  
+    <SelectRange>
+        <!-- 名称 -->
+        <name>dsxmlb</name>
+        <!-- 描述 -->
+        <description>项目类别</description>
+        <!-- 数据表名 -->
+        <table>T_XKJS_DSGL_HJXMLB</table>
+        <!-- 值字段名 -->
+        <value-column>XMLBDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>XMLBMC</label-column>     
+  </SelectRange> 
+  
+   <SelectRange>
+        <!-- 名称 -->
+        <name>kycgdl</name>
+        <!-- 描述 -->
+        <description>科研成果大类</description>
+        <pairs>
+            <pair key="1" value="文科"/>
+            <pair key="2" value="理科"/>
+        </pairs> 
+  </SelectRange>
+  
+   <SelectRange>
+        <!-- 名称 -->
+        <name>zrhcy</name>
+        <!-- 描述 -->
+        <description>转让或采用</description>
+        <pairs>
+            <pair key="1" value="转让"/>
+            <pair key="2" value="采用"/>
+        </pairs> 
+  </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>dsdp</name>
+        <!-- 描述 -->
+        <description>导师党派</description>
+        <!-- 数据表名 -->
+        <table>T_BZGB_MZDP</table>
+        <!-- 值字段名 -->
+        <value-column>MZDPDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>MZDPMC</label-column>     
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>dsxzzw</name>
+        <!-- 描述 -->
+        <description>导师行政职务</description>
+        <!-- 数据表名 -->
+        <table>T_BZGB_GBZWJB</table>
+        <!-- 值字段名 -->
+        <value-column>GBZWJBDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>GBZWJBMC</label-column>     
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>dslb</name>
+        <!-- 描述 -->
+        <description>导师类别</description>
+        <!-- 数据表名 -->
+        <table>T_BZHB_DSLB</table>
+        <!-- 值字段名 -->
+        <value-column>DSLBDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>DSLBMC</label-column>     
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>dsxkzy</name>
+        <!-- 描述 -->
+        <description>导师学科专业</description>
+        <!-- 数据表名 -->
+        <table>V_XKJS_XKXXGL_XKZYML</table>
+        <!-- 值字段名 -->
+        <value-column>ZYDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>ZYMC</label-column>     
+    </SelectRange>
+    
+    <SelectRange>
+        <name>dslx</name>
+        <description>导师类型</description>
+        <pairs>
+            <pair key="1" value="专业型硕导"/>
+            <pair key="2" value="学术型硕导"/>
+            <pair key="3" value="学术型博导"/>
+        </pairs>
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>dszc</name>
+        <!-- 描述 -->
+        <description>导师职称</description>
+        <!-- 数据表名 -->
+        <table>T_BZGB_ZYJSZW</table>
+        <!-- 值字段名 -->
+        <value-column>ZYJSZWDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>ZYJSZWMC</label-column>     
+    </SelectRange>
+    
+    <SelectRange>
+        <name>dszcjb</name>
+        <description>导师职称级别</description>
+        <pairs>
+            <pair key="0" value="初级"/>
+            <pair key="1" value="中级"/>
+            <pair key="2" value="副高"/>
+            <pair key="3" value="正高"/>
+        </pairs>
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>dszgxw</name>
+        <!-- 描述 -->
+        <description>导师最高学位</description>
+        <!-- 数据表名 -->
+        <table>T_BZGB_XW</table>
+        <!-- 值字段名 -->
+        <value-column>XWDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>XWMC</label-column>     
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>dsssyjxk</name>
+        <!-- 描述 -->
+        <description>导师所属一级学科</description>
+        <!-- 数据表名 -->
+        <table>T_XKJS_XKXXGL_XKZYML</table>
+        <!-- 值字段名 -->
+        <value-column>ZYDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>ZYMC</label-column>
+        <!-- 过滤语句 -->
+        <filter>length(ZYDM)=4</filter>
+    </SelectRange>
+    
+        <SelectRange>
+        <!-- 名称 -->
+        <name>xwyjxk</name>
+        <!-- 描述 -->
+        <description>前置学位一级学科</description>
+        <!-- 数据表名 -->
+        <table>V_XB_YJXK</table>
+        <!-- 值字段名 -->
+        <value-column>YJXKDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>YJXKMC</label-column>  
+    </SelectRange>
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>dsssejxk</name>
+        <!-- 描述 -->
+        <description>导师所属二级学科</description>
+        <!-- 数据表名 -->
+        <table>V_XB_ZY_YJXK_GX</table>
+        <!-- 值字段名 -->
+        <value-column>ZYDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>ZYMC</label-column>
+        <!-- 级联定义 -->
+        <cascades>
+            <!-- 级联名称 -->
+            <cascade>yjxk</cascade>
+        </cascades>
+    </SelectRange>
+    
+      <SelectRange>
+        <!-- 名称 -->
+        <name>xkmlm</name>
+        <!-- 描述 -->
+        <description>学科门类</description>
+        <!-- 数据表名 -->
+        <table>T_XKJS_XKXXGL_XKZYML</table>
+        <!-- 值字段名 -->
+        <value-column>zydm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>zymc</label-column>
+        <!-- 过滤语句 -->
+        <filter>length(zydm)=2</filter>
+    </SelectRange>  
+    
+      <SelectRange>
+        <!-- 名称 -->
+        <name>yjxkm</name>
+        <!-- 描述 -->
+        <description>一级学科视图</description>
+        <!-- 数据表名 -->
+        <table>v_xb_mlyjxk</table>
+        <!-- 值字段名 -->
+        <value-column>yjxkdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>yjxkmc</label-column>
+         <cascades>
+            <!-- 级联名称 -->
+          <cascade>xkmlm</cascade>
+        </cascades>  
+
+    </SelectRange>  
+    
+     <SelectRange>
+        <!-- 名称 -->
+        <name>erxkm</name>
+        <!-- 描述 -->
+        <description>二级学科视图</description>
+        <!-- 数据表名 -->
+        <table>v_xb_zy_yjxk_gx</table>
+        <!-- 值字段名 -->
+        <value-column>zydm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>zymc</label-column>
+        <cascades>
+            <!-- 级联名称 -->
+         <cascade>yjxk</cascade>
+        </cascades>  
+
+    </SelectRange>  
+    
+      <SelectRange>
+        <!-- 名称 -->
+        <name>ejxkm</name>
+        <!-- 描述 -->
+        <description>二级学科</description>
+        <!-- 数据表名 -->
+        <table>T_XKJS_XKXXGL_XKZYML</table>
+        <!-- 值字段名 -->
+        <value-column>ZYDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>ZYMC</label-column>
+        <!-- 过滤语句 -->
+        <filter>length(ZYDM) in(6,4) or ZYDM = 'x'</filter>
+    </SelectRange>  
+    
+    
+     <SelectRange>
+        <!-- 名称 -->
+        <name>xlmc</name>
+        <!-- 描述 -->
+        <description>学历代码</description>
+        <!-- 数据表名 -->
+        <table>T_BYXW_XWSY_SBQZXL</table>
+        <!-- 值字段名 -->
+        <value-column>SBQZXLDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>SBQZXLMC</label-column>     
+    </SelectRange>
+    
+     <SelectRange>
+        <!-- 名称 -->
+        <name>dwmc</name>
+        <!-- 描述 -->
+        <description>学位授予单位码</description>
+        <!-- 数据表名 -->
+        <table>T_BYXW_XWSB_GDYXDW</table>
+        <!-- 值字段名 -->
+        <value-column>dwdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>dwmc</label-column>     
+    </SelectRange>
+    
+      <SelectRange>
+        <name>qym</name>
+        <description>就业去向</description>
+        <pairs>
+            <pair key="01" value="就业"/>
+            <pair key="02" value="继续求学"/>
+            <pair key="03" value="入博士后流动站"/>
+            <pair key="04" value="出国"/> 
+            <pair key="05" value="出境"/> 
+            <pair key="06" value="待业"/> 
+            <pair key="99" value="其他"/>         
+        </pairs>
+    </SelectRange> 
+    
+     <SelectRange>
+        <name>gzxz</name>
+        <description>工作性质</description>
+        <pairs>
+            <pair key="1" value="教学与（或）科研"/>
+            <pair key="2" value="管理"/>
+            <pair key="9" value="其他"/>         
+        </pairs>
+    </SelectRange> 
+    
+     <SelectRange>
+        <!-- 名称 -->
+        <name>dwxz</name>
+        <!-- 描述 -->
+        <description>就业单位性质</description>
+        <!-- 数据表名 -->
+        <table>T_BZHB_DWXZ</table>
+        <!-- 值字段名 -->
+        <value-column>DWXZDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>DWXZMC</label-column>     
+    </SelectRange> 
+    
+       <SelectRange>
+        <!-- 名称 -->
+        <name>xzqx</name>
+        <!-- 描述 -->
+        <description>就业单位所在省市</description>
+        <!-- 数据表名 -->
+        <table>T_BZHB_XZQX</table>
+        <!-- 值字段名 -->
+        <value-column>SSDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>SSMC</label-column>     
+    </SelectRange> 
+    
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>wgyz</name>
+        <!-- 描述 -->
+        <description>外国语种</description>
+        <!-- 数据表名 -->
+        <table>T_PYGL_WGYBM_WGYZ</table>
+        <!-- 值字段名 -->
+        <value-column>YZDM</value-column>
+        <!-- 显示字段名 -->
+        <label-column>YZMC</label-column>     
+    </SelectRange> 
+    
+    
+    <SelectRange>
+        <name>gdlxm</name>
+        <description>攻读类型</description>
+        <pairs>
+            <pair key="11" value="公开招考"/>
+            <pair key="22" value="提前攻博"/>
+            <pair key="23" value="硕博连读"/>
+            <pair key="24" value="本科直博"/> 
+            <pair key="35" value="本博连读（八年制临床医学博士）"/> 
+            <pair key="46" value="同等学力申请"/> 
+            <pair key="99" value="其他"/>          
+        </pairs>
+    </SelectRange> 
+    
+    <SelectRange>
+        <name>sqxwxslbm</name>
+        <description>申请学位学生类别</description>
+        <pairs>
+            <pair key="1" value="高等学校教师在职攻读硕士学位"/>
+            <pair key="2" value="中等职业学校教师在职攻读硕士学位"/>
+            <pair key="3" value="其他同等学力人员申请硕士学位"/>
+        </pairs>
+    </SelectRange> 
+    
+     <SelectRange>
+        <name>zcjbm</name>
+        <description>专业技术职务级别</description>
+        <pairs>
+            <pair key="1" value="高级"/>
+            <pair key="2" value="副高级"/>
+            <pair key="3" value="中级"/>
+            <pair key="4" value="初级"/>
+            <pair key="9" value="无"/>
+        </pairs>
+    </SelectRange> 
+    
+    <SelectRange>
+        <name>dswyyz</name>
+        <description>导师外语语种</description>
+        <pairs>
+            <pair key="1" value="英语"/>
+            <pair key="2" value="法语"/>
+            <pair key="3" value="德语"/>
+            <pair key="4" value="俄语"/>
+            <pair key="5" value="日语"/>
+            <pair key="6" value="韩语"/>
+            <pair key="7" value="西班牙语"/>
+            <pair key="8" value="阿拉伯语"/>
+            <pair key="9" value="印地语"/>
+            <pair key="10" value="其他"/>
+            <pair key="11" value="无"/>
+        </pairs>
+    </SelectRange>
+    
+     <SelectRange>
+        <name>pyzhapqk</name>
+        <description>评阅账号安排情况</description>
+        <pairs>
+            <pair key="0" value="未安排"/>    
+            <pair key="1" value="已安排"/>
+        </pairs>
+    </SelectRange>
+    
+     <SelectRange>
+        <name>dbsqshzt</name>
+        <description>答辩申请审核状态</description>
+        <pairs>
+            <pair key="0" value="草稿"/>    
+            <pair key="1" value="待审核"/>
+            <pair key="9" value="归档"/>
+        </pairs>
+    </SelectRange>
+    
+    <SelectRange>
+        <name>jxdgzt</name>
+        <description>教学大纲操作状态</description>
+        <pairs>
+            <pair key="0" value="待维护"/>    
+            <pair key="1" value="未确认"/>
+            <pair key="2" value="已确认"/>
+        </pairs>
+    </SelectRange>
+    
+     <SelectRange>
+        <name>zblxdm</name>
+        <description>指标类型</description>
+        <pairs>
+        	<pair key="0" value="无"/>
+            <pair key="1" value="重点支持指标"/>
+            <pair key="2" value="重大项目指标"/>
+            <pair key="3" value="专项扶持指标"/>
+            <pair key="4" value="基本招生指标"/>
+            <pair key="5" value="联合培养"/>
+        </pairs>
+    </SelectRange>
+    
+     <SelectRange>
+        <name>pyjgzt</name>
+        <description>评阅结果</description>
+        <pairs>
+            <pair key="1" value="优秀"/>
+            <pair key="2" value="良好"/>
+            <pair key="3" value="中等"/>
+            <pair key="4" value="合格"/>
+        </pairs>
+    </SelectRange>
+    
+    <SelectRange>
+        <name>xwzt</name>
+        <description>学位状态</description>
+        <pairs>
+            <pair key="1" value="正常"/>
+            <pair key="2" value="撤销"/>             
+        </pairs>
+        <order>key</order>
+    </SelectRange>
+    
+     <SelectRange>
+        <name>dszcjgzt</name>
+        <description>导师自查结果</description>
+        <pairs>
+        	<pair key="-1" value="不通过"/>
+        	<pair key="0" value="未自查"/>
+            <pair key="1" value="通过"/>
+        </pairs>
+    </SelectRange>
+    
+    <SelectRange>
+        <name>lwcfl_yxjcjg</name>
+        <description>院系检测结果</description>
+        <pairs>
+        	<pair key="0" value="未检测"/>
+            <pair key="1" value="已检测未审核"/>
+            <pair key="2" value="导师坚持送审"/>
+            <pair key="9" value="通过"/>
+            <pair key="-9" value="不通过"/>
+        </pairs>
+    </SelectRange>
+    
+    
+    <SelectRange>
+        <name>bzhb_mj</name>
+        <description>密级</description>
+        <pairs>
+        	<pair key="5" value="公开"/>
+        	<pair key="6" value="商业涉密"/>
+        </pairs>
+    </SelectRange>
+    
+    <SelectRange>
+        <name>wgybmpc</name>
+        <description>外国语报名设置批次</description>
+        <pairs>
+        	<pair key="1" value="第一批次"/>
+        	<pair key="2" value="第二批次"/>
+            <pair key="3" value="第三批次"/>
+        </pairs>
+    </SelectRange>
+  
+  	<SelectRange>
+        <name>gdgzt</name>
+        <description>归档稿状态</description>
+        <pairs>
+        	<pair key="0" value="草稿"/>
+        	<pair key="1" value="待答辩秘书录入"/>
+        	<pair key="2" value="待院系审核"/>
+            <pair key="3" value="已归档"/>
+        </pairs>
+    </SelectRange>
+    <!-- 上会初审 -->
+      <SelectRange>
+        <!-- 名称 -->
+        <name>sffp</name>
+        <!-- 描述 -->
+        <description>初审审核状态</description>
+        <!-- 数据表名 -->
+        <pairs>
+        	<pair key="0" value="未审核"/>
+        	<pair key="9" value="审核通过"/>
+            <pair key="-9" value="审核不通过"/>
+        </pairs>   
+    </SelectRange> 
+    
+     <SelectRange>
+        <!-- 名称 -->
+        <name>fwhbh</name>
+        <!-- 描述 -->
+        <description>分委会编号</description>
+        <!-- 数据表名 -->
+        <table>T_BYXW_XWTL_FWHXX</table>
+        <!-- 值字段名 -->
+        <value-column>FWHBH</value-column>
+        <!-- 显示字段名 -->
+        <label-column>FWHMC</label-column>
+        <order>FWHBH</order>     
+    </SelectRange> 
+    
+     <SelectRange>
+        <!-- 名称 -->
+        <name>fwhpyjg</name>
+        <!-- 描述 -->
+        <description>分委会评审结果</description>
+        <!-- 数据表名 -->
+        <table>T_BYXW_XWTL_PSJG</table>
+        <!-- 值字段名 -->
+        <value-column>psjgdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>psjgmc</label-column>
+        <filter> PSDWFZLXBH='3'</filter>
+        <order>psjgdm</order>      
+    </SelectRange> 
+    
+    <SelectRange>
+        <!-- 名称 -->
+        <name>xbxwwhbh</name>
+        <!-- 描述 -->
+        <description>学部学位委会编号</description>
+        <!-- 数据表名 -->
+        <table>T_BYXW_XWTL_XBXWWHXX</table>
+        <!-- 值字段名 -->
+        <value-column>XBXWWHBH</value-column>
+        <!-- 显示字段名 -->
+        <label-column>XBXWWHMC</label-column>
+        <order>XBXWWHBH</order>     
+    </SelectRange> 
+    <SelectRange>
+        <!-- 名称 -->
+        <name>xbxwwhpsjg</name>
+        <!-- 描述 -->
+        <description>学部学位委会评审结果</description>
+        <!-- 数据表名 -->
+        <table>T_BYXW_XWTL_PSJG</table>
+        <!-- 值字段名 -->
+        <value-column>psjgdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>psjgmc</label-column>
+        <filter> PSDWFZLXBH='2'</filter>
+        <order>psjgdm</order>     
+    </SelectRange> 
+  	  <SelectRange>
+        <!-- 名称 -->
+        <name>xwhbh</name>
+        <!-- 描述 -->
+        <description>校委会编号</description>
+        <!-- 数据表名 -->
+        <table>T_BYXW_XWTL_XWHXX</table>
+        <!-- 值字段名 -->
+        <value-column>XWHBH</value-column>
+        <!-- 显示字段名 -->
+        <label-column>XWHMC</label-column>
+    </SelectRange> 
+    
+     <SelectRange>
+        <!-- 名称 -->
+        <name>xwhpsjg</name>
+        <!-- 描述 -->
+        <description>校委会评审结果</description>
+        <!-- 数据表名 -->
+        <table>T_BYXW_XWTL_PSJG</table>
+        <!-- 值字段名 -->
+        <value-column>psjgdm</value-column>
+        <!-- 显示字段名 -->
+        <label-column>psjgmc</label-column>
+        <filter> PSDWFZLXBH='1'</filter>
+        <order>psjgdm</order>     
+    </SelectRange> 
+  
+</SelectRanges>

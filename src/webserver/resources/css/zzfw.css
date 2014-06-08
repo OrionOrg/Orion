@@ -1,0 +1,358 @@
+
+img{
+	border:0;
+}
+a{
+	text-decoration:none;
+	color:#069;
+}
+.clear{
+	 clear: both;
+     height:1px;
+     margin-top:-1px;
+     overflow:hidden;
+}
+.huanying{
+	font-weight:blod;
+	font-family: "Microsoft Yahei";
+	font-size:24px;
+	font-weight:bold;	
+	color:#000000; 	
+	margin: 10px 20px; 
+}
+
+.fwxmContainer{
+	position: relative;
+	height:100%;
+	width:100%;
+}
+
+.yjxmContainer{
+	float: left;	
+	padding:0px;
+	text-align: center;    	
+	width: auto;	
+}
+
+.IconContainer{
+	margin-right:45px;
+	margin-top:50px;
+	padding:0;	
+	width: 143px;
+	height: 190px; 
+	float: left;
+	position: relative;
+}
+
+.mask {
+	position:absolute;
+	bottom:0;
+	width: 150px;
+	height: 200px; 
+	background-image:url(../image/zzfw/zgc.png);
+	right:0;
+	overflow:hidden;
+}
+ 
+.IconImage{
+	cursor: pointer;
+}
+
+.IconName{
+	font-family:"宋体";
+	font-size:18px;
+	font-weight:bold;
+	color:#000000; 	 
+	margin-top: 10px;
+}
+
+.IconNam a{
+	font-family:"宋体";
+	font-size:18px;
+	font-weight:bold;
+	color:#000000; 	
+	text-decoration: none;	 
+	cursor: pointer;
+}
+
+          
+.fullbg{
+	background-color: black;
+	display:none;
+	z-index:900;
+	position:absolute;
+	left:0px;
+	top:0px;
+	filter:Alpha(Opacity=30);/* IE */-moz-opacity:0.4;/* Moz + FF */opacity: 0.4;
+}  
+             
+.zzfw_dialog{
+	position:absolute;
+	padding:5px 6px 5px 6px;
+	width:560px;
+	height:300px;
+	background:#dddada;
+	z-index: 950;
+}
+.dialog_border{
+	background:#fff; 
+	width: 560px; 
+	height: 300px; 
+	overflow: hidden; 
+	margin: 0px auto; 
+	position: absolute;
+	z-index:999;
+} 
+
+.zzfw_dialog .dialog_title{
+	border-bottom: 1px solid #D8D8D8;
+	height:15px;
+	padding: 10px 12px 10px 12px;
+	font-size: 14px;
+	line-height:15px;
+	background-image: url(../image/zzfw/dialog_title.gif);
+	color: #ffffff;
+} 
+     
+.zzfw_dialog .dialog_content{
+	padding: 8px;
+	font-size: 14px;
+	font-weight: bold;
+	height: 150px;
+}     
+
+.zzfw_dialog .dialog_bottom{		 
+	height:50px;
+	padding-left:50px;
+	padding-bottom:20px;	
+	text-align: center;
+}
+.dialog_bottom image{
+	cursor: pointer;
+}
+.zzfw_button {
+    background: transparent url(../image/zzfw/but_right.png) no-repeat scroll top right;
+    color: #ffffff;
+    display: block;
+    float: left;
+    font: normal 20px arial, sans-serif;
+    height:42px;    
+    margin-right: 20px;
+    padding-right: 46px;  
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.zzfw_button span {
+    background: transparent url(../image/zzfw/but_left.png) no-repeat;
+    display: block;
+    line-height: 42px;
+    padding: 0px 0 0px 46px;
+    cursor: pointer;
+} 
+.zzfw_button:active{
+    background-position: bottom right;
+    color: #000;
+    outline: none;  
+}
+.zzfw_button:active span{
+    background-position: bottom left;
+    padding: 6px 0 4px 46px;  
+}
+
+.ejtop {
+    background: transparent url(../image/zzfw/top.png) no-repeat;
+    position:absolute; 
+    height: 7px;
+    width: 15px;
+    border: 0px solid red;
+    display:none; 
+} 
+
+.ejxm_IconContainer{
+	margin-right:30px;
+	margin-bottom:30px;
+	padding:0;	
+	width: 150px;
+	height: 90px; 
+	float: left;
+	position: relative;
+}
+
+.ejxm_IconImage{
+	cursor: pointer;
+}
+
+.ejxm_IconName{
+	font-family:"宋体";
+	font-size:14px;
+	font-weight:bold;
+	color:#000000; 	
+	margin-top: 10px; 
+}
+.ejxm_IconName a{
+	font-family:"宋体";
+	font-size:14px;
+	font-weight:bold;
+	color:#000000; 	
+	text-decoration: none;	 
+	cursor: pointer;
+}
+.ejxm_IconName a:link {
+	font-family:"宋体";
+	font-size:14px;
+	font-weight:bold;
+	color:#000000; 	
+	text-decoration: none;	 
+	cursor: pointer;
+}
+.ejxm_IconName a:visited {
+	font-family:"宋体";
+	font-size:14px;
+	font-weight:bold;
+	color:#000000; 	
+	text-decoration: none;	 
+	cursor: pointer;
+	}
+.ejxm_IconName a:hover {
+    font-family:"宋体";
+	font-size:14px;
+	font-weight:bold;
+	color:#000000; 	
+	text-decoration: none;	 
+	cursor: pointer;
+	}
+.IconName a:active {
+    font-family:"宋体";
+	font-size:14px;
+	font-weight:bold;
+	color:#000000; 
+	text-decoration: none;	 
+	cursor: pointer;
+}
+
+.zzdyContainer{
+	height:100%;
+	width:100%;
+}     
+
+
+img { border: 0px; }
+.bannerbox {background:#dddada; width: 610px; height: 855px; overflow: hidden; margin: 0px auto; position: relative; }
+#focus { margin:7px; width: 595px; height: 841px; clear: both; overflow: hidden; position: relative; float: left; }
+#focus ul { width: 595px; height: 841px;float: left; position: absolute; clear: both; padding: 0px; margin: 0px; }
+#focus ul li { float: left; width: 595px; height: 841px; overflow: hidden; position: relative; padding: 0px; margin: 0px; }
+#focus .preNext { width: 500px; height: 841px; position: absolute; top: 0px; cursor: pointer; }
+#focus .pre { top:420;left: 0; background: url(../image/zzfw/sprite.png) no-repeat left center; display: block;}
+#focus .next { top:420;right: 0; background: url(../image/zzfw/sprite1.png) no-repeat right center;display: block; }
+
+
+.reportShow{
+		float: left;	
+		margin-left: 20px;
+}	
+.optionShow{
+	float: left;	
+	padding:20px;
+	padding-top:150px;
+	align:center;		
+	width: 250px;	
+}	
+
+.showjfbz{	
+	font-size: 14px;
+	font-family: cursive;
+	font-weight: bold;
+	height: 100px;
+	padding-top: 10px;
+}
+	
+		
+   
+   .showNumber .message{  
+   	color:black;
+   	font-weight: bolder;
+   	font-size: 14px;
+   	line-height: 25px;
+   	height: 20px;
+   }
+   
+   .showNumber .numberBox{
+   	align:center;
+   } 
+    
+    .showButton{
+   	 	margin-top:20px;    
+    }  	
+   .numberBox ul{
+   	width:350px; 
+   	clear:both;
+   	padding: 5px;
+   	height: 100px;
+}   
+ 
+   .numberBox li{
+   	width:30px; 
+   	height:30px;
+   	float:left; 
+   	background:#A7CADE;    	 
+   	display:block;
+   	margin-right:5px;
+   	margin-bottom:5px;
+   	padding:10px;
+   	border: 1px solid #fff; 
+   	color: black;
+   	font-size: 16px;
+   	font-weight: bold;
+   	cursor: pointer;
+   } 
+   
+   .numberBox li.click{ 
+   border:1px solid #ff9900; 
+   background:#32789F;
+   color: #fff;
+   
+   }     
+   
+     .numberBox1 ul{
+   	width:290px; 
+   	clear:both;
+   	padding: 5px;
+   	height: 100px;
+}   
+ 
+   .numberBox1 li{
+   	width:20px; 
+   	height:20px;
+   	float:left; 
+   	background:#A7CADE;    	 
+   	display:block;
+   	margin-right:5px;
+   	margin-bottom:5px;
+   	padding:10px;
+   	border: 1px solid #fff; 
+   	color: black;
+   	font-size: 16px;
+   	font-weight: bold;
+   	cursor: pointer;
+   } 
+   
+   .numberBox1 li.click{ 
+   border:1px solid #ff9900; 
+   background:#32789F;
+   color: #fff;
+   
+   } 
+   .showButton{
+  	 	margin-top:20px;    
+   }
+   .dytop {
+    background: transparent url(../image/zzfw/arrow_up.png) no-repeat;
+    position:absolute; 
+    height: 15px;
+    width: 35px;
+    border: 0px solid red;
+    display:none; 
+    z-index: 1;
+
+}

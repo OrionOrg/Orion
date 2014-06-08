@@ -1,0 +1,78 @@
+body {
+	padding: 0px;
+	margin: 0px;	 
+	background-image: url(../image/zzfw/bg.png);
+	background-repeat: no-repeat;
+}
+
+a:link {
+	font-size: 12px;
+	text-decoration: none;
+	color:#333333;
+	}
+a:visited {
+	font-size: 12px;
+	text-decoration: none;
+	color:#333333;
+	}
+a:hover {
+    font-size: 12px;
+	text-decoration: none;
+	color: #FF0000;
+	}
+a:active {
+    font-size: 12px;
+	text-decoration: none; 
+	color:#333333;
+	}
+.over {
+	background-color: #CCCCCC;
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	filter: alpha(opacity = 80);
+	z-index: 999;
+}
+.layout {
+	display: none;
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	width: 20%; height : 20%;
+	z-index: 101;
+	text-align: center;
+	height: 20%;
+}
+.keyboard {
+	position: absolute;
+	bottom: 40%;
+	left: 10%;
+}
+.zzdy_buttonContaner{
+	 position:absolute;
+	 width:450px;
+	 padding-left: 60px;
+}
+
+.zzdy_button{
+	height: 100px;
+	width: 100px;
+	float: left;
+	margin-left: 50px;
+	display: block;
+}
+
+.zzdy_button image{
+	height: 100px;
+	width: 100px;
+	border: 0px;
+	cursor: pointer;
+}
+.welcom_bottom{
+	position: absolute;	
+	width: 411px;
+	height: 99px;	
+}

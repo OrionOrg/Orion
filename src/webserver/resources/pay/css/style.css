@@ -1,0 +1,41 @@
+body {
+FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#EEF6F6,endColorStr=#84E4F9);
+		
+}
+
+table {
+	border: 0px;
+}
+
+tr {
+	height: 30px
+}
+
+td {
+	height: 30px;
+}
+span {color:red;}
+.inputline {
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-bottom-color: #000000;
+	border-bottom: 1px solid;
+}
+
+a {
+	color: #FF9933;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: red;
+	font-size: 22px;
+}
+
+.top {
+	color: #fff;
+	font-weight: bold;
+	background-color: #19962B;
+}
