@@ -20,7 +20,7 @@
 	http://www.springframework.org/schema/util/spring-util-3.0.xsd"
 	default-lazy-init="true">
 
-	<context:component-scan base-package="org.ratchetgx.orion" />
+	<context:component-scan base-package="org.ratchetgx.orion org.ratchetgx.projectname" />
 
 	<task:annotation-driven />
 

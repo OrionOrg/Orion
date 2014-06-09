@@ -55,6 +55,7 @@ public class FwxmController{
     public String show(ModelMap model,HttpServletRequest httpRequest){  	 
 		HttpSession session = httpRequest.getSession();		
 		String ffwxmid = httpRequest.getParameter("ffwxmid");
+		log.debug("ffwxmid:"+ffwxmid);
 		try{		
 			//获取服务项目初始化信息			 
 			 List<Map> fwxmList = (List<Map>)fwxmService.initFwxm(ffwxmid);

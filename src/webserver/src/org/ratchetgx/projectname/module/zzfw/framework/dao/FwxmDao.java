@@ -222,7 +222,7 @@ public class FwxmDao {
 			}else if(clcx.startsWith("procedure:")){
 				//如果存储过程实现
 				String	procedureName = clcx.substring(10,clcx.length());
-				Class IFwxmClass = Class.forName("org.ratchetgx.orion.module.zzfw.interfaces.imp.fwxm.fwxmImp");				
+				Class IFwxmClass = Class.forName("org.ratchetgx.projectname.module.zzfw.interfaces.imp.fwxm.fwxmImp");				
 				IFwxm fwxm = (IFwxm) IFwxmClass.newInstance();				
 				fwxm.setJdbcTemplate(jdbcTemplate);
 				fwxm.setDbUtil(dbUtil);			
@@ -267,7 +267,7 @@ public class FwxmDao {
 			}else if(clcx.startsWith("procedure:")){
 				//如果存储过程实现
 				String	procedureName = clcx.substring(10,clcx.length());
-				Class IFwxmClass = Class.forName("org.ratchetgx.orion.module.zzfw.interfaces.imp.fwxm.fwxmImp");				
+				Class IFwxmClass = Class.forName("org.ratchetgx.projectname.module.zzfw.interfaces.imp.fwxm.fwxmImp");				
 				IFwxm fwxm = (IFwxm) IFwxmClass.newInstance();				
 				fwxm.setJdbcTemplate(jdbcTemplate);
 				fwxm.setDbUtil(dbUtil);			

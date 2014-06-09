@@ -435,7 +435,7 @@ public class ZzdyDao {
 				}else if(clcx.startsWith("procedure:")){
 					//如果存储过程实现
 					String	procedureName = clcx.substring(10,clcx.length());
-					Class IZzdyClass = Class.forName("com.wisedu.ssfw.module.zzfw.interfaces.imp.zzdy.zzdyImp");
+					Class IZzdyClass = Class.forName("org.ratchetgx.projectname.module.zzfw.interfaces.imp.zzdy.zzdyImp");
 					IZzdy zzdy = (IZzdy) IZzdyClass.newInstance();				
 					zzdy.setJdbcTemplate(jdbcTemplate);
 					zzdy.setDbUtil(dbUtil);			
