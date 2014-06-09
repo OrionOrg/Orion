@@ -9,8 +9,11 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd"
 		default-lazy-init="true">
 
-	<context:component-scan base-package="org.ratchetgx.orion.widgets" />
-
+    <context:component-scan base-package="org.ratchetgx" use-default-filter="false" >
+      <context:include-filter type="regex" expression="org.ratchetgx.orion.widgets.*"/>
+      <context:include-filter type="regex" expression="org.ratchetgx.projectname.widgets.*"/> 
+    </context:component-scan>
+    
 	<bean
 		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
 	</bean>
