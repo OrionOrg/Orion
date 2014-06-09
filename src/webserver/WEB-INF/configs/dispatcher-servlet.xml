@@ -12,7 +12,12 @@
 		default-lazy-init="true">
 
     <!-- Scans the classpath of this application for @Components to deploy as beans -->
-    <context:component-scan base-package="org.ratchetgx.orion.module" />
+   
+    <context:component-scan base-package="org.ratchetgx" use-default-filter="false" >
+      <context:include-filter type="regex" expression="org.ratchetgx.orion.module.*"/>
+      <context:include-filter type="regex" expression="org.ratchetgx.projectname.module.*"/> 
+    </context:component-scan>
+    
     
     <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
     </bean>

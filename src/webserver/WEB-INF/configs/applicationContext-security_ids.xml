@@ -45,7 +45,7 @@
         <beans:property name="securityMetadataSource" ref="ssfwSecurityMetadataSource" />
     </beans:bean>
 
-    <beans:bean id="ssfwUserDetailService" class="org.ratchetgx.orion.security.yjs.YjsUserDetailsService">
+    <beans:bean id="ssfwUserDetailService" class="org.ratchetgx.projectname.security.yjs.YjsUserDetailsService">
         <beans:property name="jdbcTemplate" ref="jdbcTemplate"></beans:property>
     </beans:bean>
 
@@ -63,22 +63,22 @@
     </beans:bean>   
     
 	<beans:bean id="loginSuccessUrlGetter"
-		class="org.ratchetgx.orion.security.yjs.LoginSuccessUrlGetter">
+		class="org.ratchetgx.projectname.security.yjs.LoginSuccessUrlGetter">
 	</beans:bean>
 	
 	<beans:bean id="loginFailureUrlGetter"
-		class="org.ratchetgx.orion.security.yjs.LoginFailureUrlGetter">
+		class="org.ratchetgx.projectname.security.yjs.LoginFailureUrlGetter">
 	</beans:bean>
 	    
     <beans:bean id="authenticationSuccessHandler"
-		class="org.ratchetgx.orion.security.yjs.AuthenticationSuccessHandler">
+		class="org.ratchetgx.projectname.security.yjs.AuthenticationSuccessHandler">
 		<beans:property name="defaultTargetUrlGetter">
 		   <beans:ref bean="loginSuccessUrlGetter"/>
 		</beans:property>
 	</beans:bean>
 	
 	<beans:bean id="authenticationFailureHandler"
-		class="org.ratchetgx.orion.security.yjs.AuthenticationFailureHandler">
+		class="org.ratchetgx.projectname.security.yjs.AuthenticationFailureHandler">
 		<beans:property name="useForward" value="false"></beans:property>
 		<beans:property name="defaultFailureUrlGetter">
 		   <beans:ref bean="loginFailureUrlGetter"/>
@@ -89,7 +89,7 @@
     </beans:bean>
 
 	<beans:bean id="logoutSuccessHandler"
-		class="org.ratchetgx.orion.security.yjs.LogoutSuccessHandler">
+		class="org.ratchetgx.projectname.security.yjs.LogoutSuccessHandler">
 	</beans:bean>
 
 </beans:beans>
