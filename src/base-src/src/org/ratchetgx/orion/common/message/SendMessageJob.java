@@ -25,8 +25,8 @@ public class SendMessageJob {
 			+ "from ss_message m "
 			+ "join SS_MESSAGE_RECEIVER r "
 			+ "on (m.wid = r.message_id) "
-			+ "where (r.send_flag = 0 and r.send_num <= m.send_max_num and "
-			+ "m.expect_send_time <= ?) " + "order by r.send_num desc ";
+			+ "where (r.send_flag ='0' and r.send_num <= m.send_max_num and "
+			+ "to_char(m.expect_send_time,'yyyy-MM-dd')<= ?) " + "order by r.send_num desc ";
 
 	public void work() {
 		List<Map<String, Object>> messages = jdbcTemplate.queryForList(

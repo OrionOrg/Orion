@@ -26,7 +26,7 @@ public class BizobjUtilHelper {
 			throws SQLException {
 		final Map<String, Integer> columnTypes = new HashMap<String, Integer>();
 
-		String sql = "select * from " + bizobj + " where rownum = 0";
+		String sql = "select * from " + bizobj + "  limit 0";
 		dbUtil.execute(sql, new IResultSetProcessor() {
 			public void process(ResultSet rs) throws SQLException {
 				int cc = rs.getMetaData().getColumnCount();
@@ -54,7 +54,7 @@ public class BizobjUtilHelper {
 	public Map<String, Integer> getColumnPrecision(String bizobj)
 			throws SQLException {
 		final Map<String, Integer> columnPrecisions = new HashMap<String, Integer>();
-		String sql = "select * from " + bizobj + " where rownum = 0";
+		String sql = "select * from " + bizobj + "  limit 0";
 		dbUtil.execute(sql, new IResultSetProcessor() {
 			public void process(ResultSet rs) throws SQLException {
 				int cc = rs.getMetaData().getColumnCount();

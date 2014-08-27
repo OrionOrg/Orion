@@ -186,7 +186,7 @@ public class LogUtil {
 				if (element == null) {// 调用实际的方法
 					try {
 						final String sql = "select onoff,threadmodel from t_sys_logcfg where upper(tablename)='"
-								+ bizobj.toUpperCase() + "' and rownum=1";
+								+ bizobj.toUpperCase() + "' limit 1";
 						final HashMap<String, String> rsmap = new HashMap<String, String>();
 						jdbcTemplate.query(sql,
 								new ResultSetExtractor<Object>() {
