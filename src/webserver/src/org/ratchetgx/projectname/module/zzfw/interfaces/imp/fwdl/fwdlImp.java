@@ -5,7 +5,6 @@ import org.ratchetgx.orion.common.util.DbUtil;
 import org.ratchetgx.orion.common.util.ProcedureParameterDataType;
 import org.ratchetgx.orion.common.util.ProcedureParameterDirection;
 import org.ratchetgx.orion.common.util.ProcedureParameterList;
-import org.ratchetgx.orion.widgets.progressIndicator.INodeHandler;
 import org.ratchetgx.projectname.module.zzfw.interfaces.IFwdl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

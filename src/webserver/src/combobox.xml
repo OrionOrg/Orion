@@ -36,20 +36,6 @@
     
     <SelectRange>
         <!-- 名称 -->
-        <name>xslb2</name>
-        <!-- 描述 -->
-        <description>学生类别</description>
-        <!-- 数据表名 -->
-        <class-define>org.ratchetgx.orion.widgets.selectrange.impl.Xslb2</class-define>
-        <!-- 级联定义 -->
-        <cascades>
-            <!-- 级联名称 -->
-            <cascade>pyccm</cascade>
-        </cascades>
-    </SelectRange>	
-    
-    <SelectRange>
-        <!-- 名称 -->
         <name>pyjhxxxq</name>
         <!-- 描述 -->
         <description>培养计划学期</description>
@@ -1053,19 +1039,6 @@
         <label-column>XWLWLBMC</label-column>     
     </SelectRange>
     -->
-    <SelectRange>
-        <!-- 名称 -->
-        <name>xscj_xwlwlb</name>
-        <!-- 描述 -->
-        <description>学位论文类别</description>
-        <!-- 数据表名 -->
-        <class-define>org.ratchetgx.orion.widgets.selectrange.impl.yjs.Xwlwlbxx</class-define>
-        <!-- 级联定义 -->
-        <cascades>
-            <!-- 级联名称 -->
-            <cascade>zyxwlb</cascade>
-        </cascades>
-    </SelectRange>
     
     <SelectRange>
         <!-- 名称 -->

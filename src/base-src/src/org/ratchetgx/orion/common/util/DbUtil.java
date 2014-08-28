@@ -164,6 +164,7 @@ public class DbUtil {
 		// sql + ") a) b WHERE b.rn >" + (pagination.getCurrentPage() - 1) *
 		// pagination.getPageCount() + " AND b.rn <=" +
 		// pagination.getCurrentPage() * pagination.getPageCount();
+		/*
 		StringBuilder pageSql = new StringBuilder();
 		pageSql.append("SELECT b.* FROM (SELECT a.*, rownum AS ");
 		pageSql.append(Pagination.RN);
@@ -178,6 +179,20 @@ public class DbUtil {
 		pageSql.append(Pagination.RN);
 		pageSql.append(" <= ");
 		pageSql.append(pagination.getCurrentPage() * pagination.getPageCount());
+		*/
+		
+		//select a.* from ( select * from ss_role order by role ) a  limit 2 offset 1
+		StringBuilder pageSql = new StringBuilder();
+		pageSql.append("select a.* from ( ");
+		pageSql.append(sql);
+		pageSql.append(") a ");
+		pageSql.append(" limit ");
+		pageSql.append(pagination.getPageCount());
+		pageSql.append(" offset ");
+		pageSql.append((pagination.getCurrentPage() - 1)
+				* pagination.getPageCount()); 
+		
+		log.debug("-----pageSql-------"+pageSql);
 
 		jdbcTemplate.query(pageSql.toString(),
 				new ResultSetExtractor<Object>() {
@@ -266,6 +281,7 @@ public class DbUtil {
 		// ") a) b WHERE b.rn >" + (pagination.getCurrentPage() - 1) *
 		// pagination.getPageCount() + " AND b.rn <=" +
 		// pagination.getCurrentPage() * pagination.getPageCount();
+		/*
 		final StringBuilder pageSql = new StringBuilder();
 		pageSql.append("SELECT b.* FROM (SELECT a.*, rownum AS ");
 		pageSql.append(Pagination.RN);
@@ -279,7 +295,21 @@ public class DbUtil {
 		pageSql.append(" AND b.");
 		pageSql.append(Pagination.RN);
 		pageSql.append(" <= ");
-		pageSql.append(pagination.getCurrentPage() * pagination.getPageCount());
+		pageSql.append(pagination.getCurrentPage() * pagination.getPageCount());		
+		*/
+		
+		final StringBuilder pageSql = new StringBuilder(); 
+		pageSql.append("select a.* from ( ");
+		pageSql.append(sql);
+		pageSql.append(") a ");
+		pageSql.append(" limit ");
+		pageSql.append(pagination.getPageCount());
+		pageSql.append(" offset ");
+		pageSql.append((pagination.getCurrentPage() - 1)
+				* pagination.getPageCount()); 
+		
+		log.debug("-----pageSql12-------"+pageSql); 
+		
 		jdbcTemplate.execute(new PreparedStatementCreator() {
 			public PreparedStatement createPreparedStatement(Connection conn)
 					throws SQLException {

@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="decorator"%>
-<%@ page import="com.wisedu.ssfw.common.SsfwUtilExt" %>
-<%@ page import="com.wisedu.ssfw.security.ids.IdsAuthenticationFilter" %>
+<%@ page import="org.ratchetgx.orion.common.SsfwUtilExt" %>
+<%@ page import="org.ratchetgx.orion.security.ids.IdsAuthenticationFilter" %>
 <jsp:useBean id="now" class="java.util.Date" /> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
