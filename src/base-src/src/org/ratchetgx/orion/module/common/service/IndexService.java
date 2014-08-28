@@ -130,7 +130,7 @@ public class IndexService {
 					"select WID,NAME,ICON_PATH,MODULE_WID,MENU_WID,MEMO,PARENT_WID,INDEXED,PATH from "
 							+ " SS_MENUITEM where MENU_WID = ?");
 			if (parent == null) {
-				sql.append(" and PARENT_WID is null");
+				sql.append(" and (PARENT_WID='' or PARENT_WID is null )");
 			} else {
 				sql.append(" and PARENT_WID = ?");
 			}

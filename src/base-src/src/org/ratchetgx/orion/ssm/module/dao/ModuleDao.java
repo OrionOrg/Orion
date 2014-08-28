@@ -29,7 +29,7 @@ public class ModuleDao {
         String sql = "select WID,NAME,MEMO,PARENT_WID from SS_MODULE where PARENT_WID = ?";
 
         if ("000000".equals(parentModuleWid) || parentModuleWid == null) {
-            sql += " or PARENT_WID is null";
+            sql += " or (PARENT_WID='' or PARENT_WID is null)";
         }
 
         log.info(sql);

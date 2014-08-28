@@ -27,7 +27,7 @@ public class CreateMenuDao {
         String sql = "";
         List<Map<String, String>> modules = null;
         if (parentModuleWid == null) {
-            sql = "SELECT wid,name,memo FROM ss_module WHERE parent_wid IS NULL";
+            sql = "SELECT wid,name,memo FROM ss_module WHERE (parent_wid='' or parent_wid IS NULL)";
             modules = (List<Map<String, String>>) jdbcTemplate.query(sql,
                     new ResultSetExtractor() {
                         public Object extractData(ResultSet rs)

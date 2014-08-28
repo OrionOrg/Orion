@@ -34,7 +34,7 @@ public class MenuItemDao {
         List<Map<String, String>> items = null;
 
         if (parentMenuItemWid == null || "".equals(parentMenuItemWid.trim())) {
-            String sql = "SELECT wid,name,icon_path,path,module_wid,menu_wid,memo,parent_wid FROM ss_menuitem WHERE menu_wid=? AND parent_wid IS NULL ORDER BY indexed";
+            String sql = "SELECT wid,name,icon_path,path,module_wid,menu_wid,memo,parent_wid FROM ss_menuitem WHERE menu_wid=? AND (parent_wid='' or parent_wid IS NULL) ORDER BY indexed";
 
             items = (List<Map<String, String>>) jdbcTemplate.query(sql,
                     new PreparedStatementSetter() {
@@ -246,7 +246,7 @@ public class MenuItemDao {
 
         // 更新所有indexed为空的兄弟菜单项的indexed为0
         if (menuItem.get("parent_wid") == null) {
-            sql = "UPDATE ss_menuitem SET indexed = 0 WHERE indexed IS NULL AND menu_wid = ? AND parent_wid IS NULL";
+            sql = "UPDATE ss_menuitem SET indexed = 0 WHERE (indexed='' or indexed IS NULL) AND menu_wid = ? AND (parent_wid='' or parent_wid IS NULL)";
             jdbcTemplate.execute(sql, new PreparedStatementCallback() {
                 public Object doInPreparedStatement(PreparedStatement pstmt)
                         throws SQLException, DataAccessException {
@@ -257,7 +257,7 @@ public class MenuItemDao {
                 }
             });
         } else {
-            sql = "UPDATE ss_menuitem SET indexed = 0 WHERE indexed IS NULL AND menu_wid = ? AND parent_wid = ?";
+            sql = "UPDATE ss_menuitem SET indexed = 0 WHERE (indexed='' or indexed IS NULL) AND menu_wid = ? AND parent_wid = ?";
             jdbcTemplate.execute(sql, new PreparedStatementCallback() {
                 public Object doInPreparedStatement(PreparedStatement pstmt)
                         throws SQLException, DataAccessException {
@@ -282,7 +282,7 @@ public class MenuItemDao {
         // 获取上移之前menuItemWid之前的菜单项
         String preMenuItemWid = "";
         if (menuItem.get("parent_wid") == null) {
-            sql = "SELECT wid FROM ss_menuitem WHERE indexed < ? AND menu_wid = ? AND parent_wid IS NULL ORDER BY indexed DESC ";
+            sql = "SELECT wid FROM ss_menuitem WHERE indexed < ? AND menu_wid = ? AND (parent_wid='' or parent_wid IS NULL) ORDER BY indexed DESC ";
             preMenuItemWid = (String) jdbcTemplate.query(sql,
                     new PreparedStatementSetter() {
                         public void setValues(PreparedStatement pstmt)
@@ -382,7 +382,7 @@ public class MenuItemDao {
 
         // 更新所有indexed为空的兄弟菜单项的indexed为0
         if (menuItem.get("parent_wid") == null) {
-            sql = "UPDATE ss_menuitem SET indexed = 0 WHERE indexed IS NULL AND menu_wid = ? AND parent_wid IS NULL";
+            sql = "UPDATE ss_menuitem SET indexed = 0 WHERE (indexed='' or indexed IS NULL) AND menu_wid = ? AND (parent_wid='' or parent_wid IS NULL)";
             jdbcTemplate.execute(sql, new PreparedStatementCallback() {
                 public Object doInPreparedStatement(PreparedStatement pstmt)
                         throws SQLException, DataAccessException {
@@ -393,7 +393,7 @@ public class MenuItemDao {
                 }
             });
         } else {
-            sql = "UPDATE ss_menuitem SET indexed = 0 WHERE indexed IS NULL AND menu_wid = ? AND parent_wid = ?";
+            sql = "UPDATE ss_menuitem SET indexed = 0 WHERE (indexed='' or indexed IS NULL) AND menu_wid = ? AND parent_wid = ?";
             jdbcTemplate.execute(sql, new PreparedStatementCallback() {
                 public Object doInPreparedStatement(PreparedStatement pstmt)
                         throws SQLException, DataAccessException {
@@ -413,7 +413,7 @@ public class MenuItemDao {
         // 获取下移之前menuItemWid之后的菜单项
         String nextMenuItemWid = "";
         if (menuItem.get("parent_wid") == null) {
-            sql = "SELECT wid FROM ss_menuitem WHERE indexed > ? AND menu_wid = ? AND parent_wid IS NULL ORDER BY indexed ASC ";
+            sql = "SELECT wid FROM ss_menuitem WHERE indexed > ? AND menu_wid = ? AND (parent_wid='' or parent_wid IS NULL) ORDER BY indexed ASC ";
             nextMenuItemWid = (String) jdbcTemplate.query(sql,
                     new PreparedStatementSetter() {
                         public void setValues(PreparedStatement pstmt)
@@ -562,7 +562,7 @@ public class MenuItemDao {
             throw new RuntimeException(menuWid + "不能为空！");
         }
 
-        String sql = "SELECT COUNT(*) FROM ss_menuitem WHERE menu_wid = ? AND parent_wid IS NULL";
+        String sql = "SELECT COUNT(*) FROM ss_menuitem WHERE menu_wid = ? AND (parent_wid='' or parent_wid IS NULL)";
 
         Object c = jdbcTemplate.query(sql, new PreparedStatementSetter() {
             public void setValues(PreparedStatement pstmt) throws SQLException {
@@ -581,7 +581,7 @@ public class MenuItemDao {
             }
         });
 
-        sql = "SELECT wid FROM ss_menuitem WHERE menu_wid = ? AND parent_wid IS NULL ORDER BY indexed ASC";
+        sql = "SELECT wid FROM ss_menuitem WHERE menu_wid = ? AND (parent_wid='' or parent_wid IS NULL) ORDER BY indexed ASC";
         List<String> wids = (List<String>) jdbcTemplate.query(sql,
                 new PreparedStatementSetter() {
                     public void setValues(PreparedStatement pstmt)
