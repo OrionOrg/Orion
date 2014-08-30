@@ -111,8 +111,12 @@
     </filter-mapping>
     
     <servlet>
-         <servlet-name>log4j-init</servlet-name>
-         <servlet-class>org.ratchetgx.orion.common.web.Log4jInit</servlet-class>
+         <servlet-name>log4jInit</servlet-name>
+         <servlet-class>com.unis.ucsm.common.Log4jInit</servlet-class>
+         <init-param> 
+			<param-name>logFileName</param-name> 
+			<param-value>orion.log</param-value> 
+			</init-param> 
          <load-on-startup>0</load-on-startup>
     </servlet>
     

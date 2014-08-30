@@ -13,7 +13,7 @@
         
     <appender name="logFile" class="org.apache.log4j.RollingFileAppender">    
         <!-- 设置日志输出文件名 -->       
-        <param name="File" value="${LOG_FILE_DIR}orion.log" />
+        <param name="File" value="${LOG_FILE_PATH}" />
         <!-- 设置是否在重新启动服务时，在原有日志的基础添加新日志 -->    
         <param name="Append" value="true" />    
         <param name="MaxFileSize" value="3MB" />    
