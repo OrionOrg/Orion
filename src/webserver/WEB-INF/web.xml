@@ -110,6 +110,12 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
     
+    <servlet>
+         <servlet-name>log4j-init</servlet-name>
+         <servlet-class>org.ratchetgx.orion.common.web.Log4jInit</servlet-class>
+         <load-on-startup>0</load-on-startup>
+    </servlet>
+    
     <!-- 权限管理 -->
     <servlet>
         <servlet-name>ssm</servlet-name>
