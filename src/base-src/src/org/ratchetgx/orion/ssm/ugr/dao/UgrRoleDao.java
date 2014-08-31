@@ -49,8 +49,29 @@ public class UgrRoleDao {
     }
 
     public void deleteRole(final String role) {
-        String sql = "DELETE FROM ss_role WHERE role = ?";
-        jdbcTemplate.execute(sql, new PreparedStatementCallback() {
+    	 String sql1 = "DELETE FROM ss_user_rel_role WHERE role = ?";
+    	 jdbcTemplate.execute(sql1, new PreparedStatementCallback() {
+             public Object doInPreparedStatement(PreparedStatement pstmt)
+                     throws SQLException, DataAccessException {
+                 pstmt.setString(1, role);
+
+                 return pstmt.executeUpdate();
+             }
+         });
+    	 
+    	 String sql2 = "DELETE FROM ss_group_rel_role WHERE role = ?";
+    	 
+    	 jdbcTemplate.execute(sql2, new PreparedStatementCallback() {
+             public Object doInPreparedStatement(PreparedStatement pstmt)
+                     throws SQLException, DataAccessException {
+                 pstmt.setString(1, role);
+
+                 return pstmt.executeUpdate();
+             }
+         });
+    	 
+        String sql3 = "DELETE FROM ss_role WHERE role = ?";
+        jdbcTemplate.execute(sql3, new PreparedStatementCallback() {
             public Object doInPreparedStatement(PreparedStatement pstmt)
                     throws SQLException, DataAccessException {
                 pstmt.setString(1, role);
@@ -61,8 +82,38 @@ public class UgrRoleDao {
     }
 
     public void deleteRoles(final List<String> roles) {
-        String sql = "DELETE FROM ss_role WHERE role = ?";
-        jdbcTemplate.execute(sql, new PreparedStatementCallback() {
+    	 String sql1 = "DELETE FROM ss_user_rel_role WHERE role = ?";
+    	 jdbcTemplate.execute(sql1, new PreparedStatementCallback() {
+             public Object doInPreparedStatement(PreparedStatement pstmt)
+                     throws SQLException, DataAccessException {
+                 Iterator<String> roleItr = roles.iterator();
+                 while (roleItr.hasNext()) {
+                     String role = roleItr.next();
+                     pstmt.setString(1, role);
+                     pstmt.addBatch();
+                 }
+                 return pstmt.executeBatch();
+             }
+         });
+         
+         
+         String sql2 = "DELETE FROM ss_group_rel_role WHERE role = ?";
+         jdbcTemplate.execute(sql2, new PreparedStatementCallback() {
+             public Object doInPreparedStatement(PreparedStatement pstmt)
+                     throws SQLException, DataAccessException {
+                 Iterator<String> roleItr = roles.iterator();
+                 while (roleItr.hasNext()) {
+                     String role = roleItr.next();
+                     pstmt.setString(1, role);
+                     pstmt.addBatch();
+                 }
+                 return pstmt.executeBatch();
+             }
+         });      
+         
+         
+        String sql3 = "DELETE FROM ss_role WHERE role = ?";
+        jdbcTemplate.execute(sql3, new PreparedStatementCallback() {
             public Object doInPreparedStatement(PreparedStatement pstmt)
                     throws SQLException, DataAccessException {
                 Iterator<String> roleItr = roles.iterator();

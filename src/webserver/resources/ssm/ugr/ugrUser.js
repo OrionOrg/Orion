@@ -34,7 +34,7 @@ var ugrUserGrid = new Ext.grid.GridPanel({
 				}
 			}]),
 	sm : ugrUserSM,
-	bodyStyle : 'height:800',
+	bodyStyle : 'height:450px',
 
 	viewConfig : {
 		forceFit : false

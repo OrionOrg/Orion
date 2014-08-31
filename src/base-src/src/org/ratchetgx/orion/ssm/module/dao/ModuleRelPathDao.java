@@ -112,8 +112,8 @@ public class ModuleRelPathDao {
     }
 
     public void setAsDefault(final String moduleWid, final String pathWid) {
-        String sql_0 = "UPDATE ss_modulepath SET indexed = 1 WHERE module_wid = ? AND indexed = 0";
-        String sql_1 = "UPDATE ss_modulepath SET indexed = 0 WHERE wid = ?";
+        String sql_0 = "UPDATE ss_modulepath SET indexed = '1' WHERE module_wid = ? AND indexed = '0'";
+        String sql_1 = "UPDATE ss_modulepath SET indexed = '0' WHERE wid = ?";
         jdbcTemplate.execute(sql_0, new PreparedStatementCallback() {
             public Object doInPreparedStatement(PreparedStatement pstmt)
                     throws SQLException, DataAccessException {

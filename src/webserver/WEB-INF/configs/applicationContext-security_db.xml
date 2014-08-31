@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+             http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd"
+             default-lazy-init="true">
+
+    <http use-expressions="true" entry-point-ref="dbAuthenticationEntryPoint">
+        <session-management>
+            <concurrency-control max-sessions="1" error-if-maximum-exceeded="true" />
+        </session-management>
+		<logout invalidate-session="false"
+        		success-handler-ref="logoutSuccessHandler"/>
+        <custom-filter position="FORM_LOGIN_FILTER" ref="dbAuthenticationFilter" />
+        <custom-filter before="FILTER_SECURITY_INTERCEPTOR" ref="ssfwFilterSecurityInterceptor" />
+    </http>
+    
+    <beans:bean id="dbAuthenticationEntryPoint" class="org.ratchetgx.orion.security.db.DbAuthenticationEntryPoint">
+        <beans:property name="loginUrl" value="login.jsp" /> 
+    </beans:bean>
+    
+    <beans:bean id="dbAuthenticationFilter" class="org.ratchetgx.orion.security.db.DbAuthenticationFilter">
+        <beans:property name="authenticationManager" ref="dbAuthenticationManager" /> 
+        <beans:property name="loginUrl" value="login.jsp" />
+        <beans:property name="authenticationSuccessHandler" ref="authenticationSuccessHandler" />
+        <beans:property name="authenticationFailureHandler" ref="authenticationFailureHandler" />
+    </beans:bean>
+    
+    <authentication-manager alias="dbAuthenticationManager">
+        <authentication-provider ref="dbAuthenticationProvider"></authentication-provider>
+    </authentication-manager>
+    
+    <beans:bean id="dbAuthenticationProvider" class="org.ratchetgx.orion.security.db.DbAuthenticationProvider">
+        <beans:property name="userDetailsService" ref="ssfwUserDetailService" /> 
+    </beans:bean>
+    
+    <beans:bean id="ssfwFilterSecurityInterceptor"
+                class="org.springframework.security.web.access.intercept.FilterSecurityInterceptor">
+        <beans:property name="authenticationManager" ref="dbAuthenticationManager" />
+        <beans:property name="accessDecisionManager" ref="ssfwAccessDecisionManager" />
+        <beans:property name="securityMetadataSource" ref="ssfwSecurityMetadataSource" />
+    </beans:bean>
+
+    <beans:bean id="ssfwUserDetailService" class="org.ratchetgx.projectname.security.yjs.YjsUserDetailsService">
+        <beans:property name="jdbcTemplate" ref="jdbcTemplate"></beans:property>
+    </beans:bean>
+
+    <!-- 访问决策器，决定某个用户具有的角色，是否有足够的权限去访问某个资源 -->
+    <beans:bean id="ssfwAccessDecisionManager"
+                class="org.ratchetgx.orion.security.SsfwAccessDecisionManager">
+    </beans:bean>
+
+    <!-- 资源源数据定义，即定义某一资源可以被哪些角色访问 -->
+    <beans:bean id="ssfwSecurityMetadataSource"
+                class="org.ratchetgx.orion.security.SsfwInvocationSecurityMetadataSource"
+                init-method="initResouceDefine">
+        <beans:property name="jdbcTemplate" ref="jdbcTemplate"></beans:property>
+        <beans:property name="securityCache" ref="securityCache"></beans:property>
+    </beans:bean>   
+    
+	<beans:bean id="loginSuccessUrlGetter"
+		class="org.ratchetgx.projectname.security.yjs.LoginSuccessUrlGetter">
+	</beans:bean>
+	
+	<beans:bean id="loginFailureUrlGetter"
+		class="org.ratchetgx.projectname.security.yjs.LoginFailureUrlGetter">
+	</beans:bean>
+	    
+    <beans:bean id="authenticationSuccessHandler"
+		class="org.ratchetgx.projectname.security.yjs.AuthenticationSuccessHandler">
+		<beans:property name="defaultTargetUrlGetter">
+		   <beans:ref bean="loginSuccessUrlGetter"/>
+		</beans:property>
+	</beans:bean>
+	
+	<beans:bean id="authenticationFailureHandler"
+		class="org.ratchetgx.projectname.security.yjs.AuthenticationFailureHandler">
+		<beans:property name="useForward" value="false"></beans:property>
+		<beans:property name="defaultFailureUrlGetter">
+		   <beans:ref bean="loginFailureUrlGetter"/>
+		</beans:property>
+	</beans:bean>	
+     
+	<beans:bean id="logoutSuccessHandler"
+		class="org.ratchetgx.projectname.security.yjs.LogoutSuccessHandler">
+	</beans:bean>
+
+</beans:beans>

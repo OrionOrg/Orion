@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import org.slf4j.Logger;
@@ -65,14 +66,76 @@ public class ModuleDao {
     }
 
     public void delete(final String moduleWid) {
-        String sql = "delete from SS_MODULE where WID = ?";
-        jdbcTemplate.execute(sql, new PreparedStatementCallback() {
+    	
+    	StringBuilder sql = new StringBuilder();    	 
+    	sql.append(" select wid from ( WITH RECURSIVE d AS ("); 
+    	sql.append(" SELECT d1.wid,d1.parent_wid,name");
+    	sql.append("    FROM ss_module d1 ");
+    	sql.append(" where  d1.wid=? ");
+    	sql.append(" union ALL ");
+    	sql.append(" SELECT d2.wid,d2.parent_wid ,d2.name ");
+    	sql.append("    FROM ss_module d2,d");
+    	sql.append(" WHERE   d2.parent_wid = d.wid");
+    	sql.append(" ) SELECT * FROM d )temp ");    	  	 
+
+    	 final List<String> moduleWids = (List<String>) jdbcTemplate
+                 .query(sql.toString(), new PreparedStatementSetter() {
+             public void setValues(PreparedStatement pstmt)
+                     throws SQLException {
+                 pstmt.setString(1, moduleWid);
+             }
+         }, new ResultSetExtractor() {
+             public List<String> extractData(ResultSet rs)
+                     throws SQLException, DataAccessException {
+                 List<String> modules = new ArrayList<String>();
+                 while (rs.next()) { 
+                     modules.add(rs.getString("wid"));
+                 }
+                 return modules;
+             }
+         });
+            	 
+    	 String sql1 = "delete from ss_module_rel_role where module_wid = ?";
+    	 jdbcTemplate.execute(sql1, new PreparedStatementCallback() {
+             public Object doInPreparedStatement(PreparedStatement pstmt)
+                     throws SQLException, DataAccessException {
+                 Iterator<String> groupWidItr = moduleWids.iterator();
+                 while (groupWidItr.hasNext()) {
+                     String groupWid = groupWidItr.next();
+                     pstmt.setString(1, groupWid);
+                     pstmt.addBatch();
+                 }
+                 return pstmt.executeBatch();
+             }
+         });
+    	
+    	 
+    	 String sql2 = "delete from ss_modulepath where module_wid = ?";
+    	 jdbcTemplate.execute(sql2, new PreparedStatementCallback() {
+             public Object doInPreparedStatement(PreparedStatement pstmt)
+                     throws SQLException, DataAccessException {
+                 Iterator<String> groupWidItr = moduleWids.iterator();
+                 while (groupWidItr.hasNext()) {
+                     String groupWid = groupWidItr.next();
+                     pstmt.setString(1, groupWid);
+                     pstmt.addBatch();
+                 }
+                 return pstmt.executeBatch();
+             }
+         });
+    	
+    	
+        String sql3 = "delete from SS_MODULE where WID = ?";
+        jdbcTemplate.execute(sql3, new PreparedStatementCallback() {
             public Object doInPreparedStatement(PreparedStatement pstmt)
                     throws SQLException, DataAccessException {
-
-                pstmt.setString(1, moduleWid);
-                return pstmt.executeUpdate();
-
+                Iterator<String> groupWidItr = moduleWids.iterator();
+                while (groupWidItr.hasNext()) {
+                    String groupWid = groupWidItr.next();
+                    pstmt.setString(1, groupWid);
+                    pstmt.addBatch();
+                }
+                return pstmt.executeBatch();
             }
         });
     }

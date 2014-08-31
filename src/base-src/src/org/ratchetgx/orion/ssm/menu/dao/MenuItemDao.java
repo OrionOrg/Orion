@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import org.slf4j.LoggerFactory;
@@ -108,9 +109,21 @@ public class MenuItemDao {
     }
 
     public void delete(final String menuItemWid) {
-        String sql = "DELETE FROM ss_menuitem WHERE wid=?";
+    	
+    	StringBuilder sql = new StringBuilder();
+    	sql.append("DELETE FROM ss_menuitem WHERE  wid in ( ");
+    	sql.append(" select wid from ( WITH RECURSIVE d AS ("); 
+    	sql.append(" SELECT d1.wid,d1.parent_wid,name");
+    	sql.append("    FROM ss_menuitem d1 ");
+    	sql.append(" where  d1.wid=? ");
+    	sql.append(" union ALL ");
+    	sql.append(" SELECT d2.wid,d2.parent_wid ,d2.name ");
+    	sql.append("    FROM ss_menuitem d2,d");
+    	sql.append(" WHERE   d2.parent_wid = d.wid");
+    	sql.append(" ) SELECT * FROM d )temp ");
+    	sql.append(") ");     	 
 
-        jdbcTemplate.execute(sql, new PreparedStatementCallback() {
+        jdbcTemplate.execute(sql.toString(), new PreparedStatementCallback() {
             public Object doInPreparedStatement(PreparedStatement pstmt)
                     throws SQLException, DataAccessException {
 

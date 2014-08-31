@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.ratchetgx.orion.common.util.DbUtil;
 import org.ratchetgx.orion.common.util.IPreparedResultSetProcessor;
+import org.ratchetgx.orion.security.db.DbConstants;
 import org.ratchetgx.orion.security.mixjaccount.MixJaccountAuthenticationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -162,6 +163,8 @@ public class IdsAuthenticationFilter extends
 
 		authRequest.setDetails(authenticationDetailsSource
 				.buildDetails(request));
+		
+		request.getSession().setAttribute(Constants.IDS_SESSION_LOGINED,true);
 
 		return this.getAuthenticationManager().authenticate(authRequest);
 	}

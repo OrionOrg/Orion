@@ -99,7 +99,7 @@ public class DbUtil {
 
 	public void execute(String sql, final IResultSetProcessor rsp)
 			throws SQLException {
-
+        log.debug("执行sql："+sql);
 		jdbcTemplate.query(sql, new ResultSetExtractor<Object>() {
 			public Object extractData(ResultSet rs) throws SQLException,
 					DataAccessException {
@@ -133,9 +133,9 @@ public class DbUtil {
 		if (pagination.getCurrentPage() < 1) {
 			pagination.setCurrentPage(1);
 		}
-
+		 log.debug("执行sql："+sql);
 		// 求总数
-		String totalSql = "select count(1) from (" + sql + ")";
+		String totalSql = "select count(1) from (" + sql + ") temp";
 		jdbcTemplate.query(totalSql, new ResultSetExtractor<Map>() {
 			public Map extractData(ResultSet rs) throws SQLException,
 					DataAccessException {
@@ -190,9 +190,7 @@ public class DbUtil {
 		pageSql.append(pagination.getPageCount());
 		pageSql.append(" offset ");
 		pageSql.append((pagination.getCurrentPage() - 1)
-				* pagination.getPageCount()); 
-		
-		log.debug("-----pageSql-------"+pageSql);
+				* pagination.getPageCount());  
 
 		jdbcTemplate.query(pageSql.toString(),
 				new ResultSetExtractor<Object>() {
@@ -207,7 +205,7 @@ public class DbUtil {
 
 	public void execute(final String sql, final IPreparedResultSetProcessor prsp)
 			throws SQLException {
-
+		 log.debug("执行sql："+sql);
 		jdbcTemplate.execute(new PreparedStatementCreator() {
 			public PreparedStatement createPreparedStatement(Connection conn)
 					throws SQLException {
@@ -237,9 +235,9 @@ public class DbUtil {
 		if (pagination.getCurrentPage() < 1) {
 			pagination.setCurrentPage(1);
 		}
-
+		 log.debug("执行sql："+sql);
 		// 求总数
-		final String totalSql = "select count(1) from (" + sql + ")";
+		final String totalSql = "select count(1) from (" + sql + ") temp";
 		jdbcTemplate.execute(new PreparedStatementCreator() {
 			public PreparedStatement createPreparedStatement(Connection conn)
 					throws SQLException {
@@ -306,9 +304,7 @@ public class DbUtil {
 		pageSql.append(pagination.getPageCount());
 		pageSql.append(" offset ");
 		pageSql.append((pagination.getCurrentPage() - 1)
-				* pagination.getPageCount()); 
-		
-		log.debug("-----pageSql12-------"+pageSql); 
+				* pagination.getPageCount());  
 		
 		jdbcTemplate.execute(new PreparedStatementCreator() {
 			public PreparedStatement createPreparedStatement(Connection conn)
@@ -335,6 +331,7 @@ public class DbUtil {
 
 	public void execute(final String sql,
 			final IPreparedStatementProcessor pstmtp) throws SQLException {
+		 log.debug("执行sql："+sql);
 		jdbcTemplate.execute(sql, new PreparedStatementCallback<Object>() {
 			public Object doInPreparedStatement(PreparedStatement pstmt)
 					throws SQLException, DataAccessException {
@@ -348,7 +345,7 @@ public class DbUtil {
 
 	public void execute(final String sql, final ICallableResultSetProcessor crsp)
 			throws SQLException {
-
+		 log.debug("执行sql："+sql);
 		jdbcTemplate.execute(new CallableStatementCreator() {
 			public CallableStatement createCallableStatement(Connection conn)
 					throws SQLException {

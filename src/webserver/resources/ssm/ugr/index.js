@@ -12,7 +12,7 @@ Ext.onReady(function() {
 						layout : 'fit',
 						items : panel,
 				        renderTo:'managerContainer',
-				        height: 500
+				        height: 800
 					});
 
 		});

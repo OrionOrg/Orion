@@ -41,7 +41,7 @@
     </head>
 
     <body>
-        <form action="${ctx}/j_spring_ids_security_check" method="post" id="loginForm">
+        <form action="${ctx}/j_spring_db_security_check" method="post" id="loginForm">
         	<input type="hidden" name="mode" value="db"/>
             <table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
                 <tr>

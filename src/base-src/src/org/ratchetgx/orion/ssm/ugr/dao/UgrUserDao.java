@@ -55,8 +55,31 @@ public class UgrUserDao {
     }
 
     public void deleteUser(final String userWid) {
-        String sql = "DELETE FROM ss_user WHERE wid = ?";
-        jdbcTemplate.execute(sql, new PreparedStatementCallback() {
+    	 String sql1 = "DELETE FROM ss_user_rel_role WHERE user_wid = ?";
+    	 jdbcTemplate.execute(sql1, new PreparedStatementCallback() {
+             public Object doInPreparedStatement(PreparedStatement pstmt)
+                     throws SQLException, DataAccessException {
+                 pstmt.setString(1, userWid);
+
+                 return pstmt.executeUpdate();
+             }
+         });
+         
+         
+         String sql2 = "DELETE FROM ss_group_rel_user WHERE user_wid = ?";
+         jdbcTemplate.execute(sql2, new PreparedStatementCallback() {
+             public Object doInPreparedStatement(PreparedStatement pstmt)
+                     throws SQLException, DataAccessException {
+                 pstmt.setString(1, userWid);
+
+                 return pstmt.executeUpdate();
+             }
+         });
+         
+         
+         
+        String sql3 = "DELETE FROM ss_user WHERE wid = ?";
+        jdbcTemplate.execute(sql3, new PreparedStatementCallback() {
             public Object doInPreparedStatement(PreparedStatement pstmt)
                     throws SQLException, DataAccessException {
                 pstmt.setString(1, userWid);
@@ -67,8 +90,40 @@ public class UgrUserDao {
     }
 
     public void deleteUsers(final List<String> userWids) {
-        String sql = "DELETE FROM ss_user WHERE wid = ?";
-        jdbcTemplate.execute(sql, new PreparedStatementCallback() {
+    	
+    	 String sql1 = "DELETE FROM ss_user_rel_role WHERE user_wid = ?";
+    	 jdbcTemplate.execute(sql1, new PreparedStatementCallback() {
+             public Object doInPreparedStatement(PreparedStatement pstmt)
+                     throws SQLException, DataAccessException {
+                 Iterator<String> userWidItr = userWids.iterator();
+                 while (userWidItr.hasNext()) {
+                     String userWid = userWidItr.next();
+                     pstmt.setString(1, userWid);
+                     pstmt.addBatch();
+                 }
+                 return pstmt.executeBatch();
+             }
+         });
+         
+         
+         String sql2 = "DELETE FROM ss_group_rel_user WHERE user_wid = ?";
+         jdbcTemplate.execute(sql2, new PreparedStatementCallback() {
+             public Object doInPreparedStatement(PreparedStatement pstmt)
+                     throws SQLException, DataAccessException {
+                 Iterator<String> userWidItr = userWids.iterator();
+                 while (userWidItr.hasNext()) {
+                     String userWid = userWidItr.next();
+                     pstmt.setString(1, userWid);
+                     pstmt.addBatch();
+                 }
+                 return pstmt.executeBatch();
+             }
+         }); 
+         
+         
+         
+        String sql3 = "DELETE FROM ss_user WHERE wid = ?";
+        jdbcTemplate.execute(sql3, new PreparedStatementCallback() {
             public Object doInPreparedStatement(PreparedStatement pstmt)
                     throws SQLException, DataAccessException {
                 Iterator<String> userWidItr = userWids.iterator();

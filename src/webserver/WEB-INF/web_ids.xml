@@ -7,8 +7,7 @@
             /WEB-INF/configs/cacheContext.xml
             /WEB-INF/configs/quartzContext.xml
             /WEB-INF/configs/loggerContext.xml
-            /WEB-INF/configs/applicationContext-security_db.xml
-         
+            /WEB-INF/configs/applicationContext-security_ids.xml         
         </param-value>
     </context-param>
 
@@ -33,11 +32,11 @@
         <filter-class>org.ratchetgx.orion.common.web.ValidateCodeFilter</filter-class>
     </filter>
     <filter>
-        <filter-name>dbFilter</filter-name>
-        <filter-class>org.ratchetgx.orion.security.db.DbFilter</filter-class>
+        <filter-name>idsFilter</filter-name>
+        <filter-class>org.ratchetgx.orion.security.ids.IdsFilter</filter-class>
         <init-param>
            <param-name>excludes</param-name>
-           <param-value>/*/login.jsp,/*/login_*.jsp,/*/j_spring_db_security_check,/*/j_spring_security_logout,/*/captcha.do</param-value>
+           <param-value>/*/login.jsp,/*/login_*.jsp,/*/j_spring_ids_security_check,/*/j_spring_security_logout,/*/captcha.do,/*/sygl/*.do</param-value>
         </init-param>
     </filter>
     <!-- SpringSecurity filter-->
@@ -78,19 +77,19 @@
     
     <!-- 开始：ids配置 -->
     <filter-mapping>
-        <filter-name>dbFilter</filter-name>
+        <filter-name>idsFilter</filter-name>
         <url-pattern>*.jsp</url-pattern>
     </filter-mapping>
     <filter-mapping>
-        <filter-name>dbFilter</filter-name>
+        <filter-name>idsFilter</filter-name>
         <url-pattern>*.do</url-pattern>
     </filter-mapping>
     <filter-mapping>
-        <filter-name>dbFilter</filter-name>
+        <filter-name>idsFilter</filter-name>
         <url-pattern>*.ssm</url-pattern>
     </filter-mapping>
     <filter-mapping>
-        <filter-name>dbFilter</filter-name>
+        <filter-name>idsFilter</filter-name>
         <url-pattern>*.widgets</url-pattern>
     </filter-mapping>
     <!-- 结束：ids配置 -->
@@ -109,6 +108,16 @@
         <filter-name>sitemesh</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+    
+    <servlet>
+         <servlet-name>log4jInit</servlet-name>
+         <servlet-class>com.unis.ucsm.common.Log4jInit</servlet-class>
+         <init-param> 
+			<param-name>logFileName</param-name> 
+			<param-value>ucsm.log</param-value> 
+			</init-param> 
+         <load-on-startup>0</load-on-startup>
+    </servlet>
     
     <!-- 权限管理 -->
     <servlet>

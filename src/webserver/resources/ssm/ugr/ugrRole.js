@@ -33,7 +33,7 @@ var ugrRoleGrid = new Ext.grid.GridPanel({
 				}
 			}]),
 	sm : ugrRoleSM,
-	bodyStyle : 'height:800',
+	bodyStyle : 'height:450px',
 
 	viewConfig : {
 		forceFit : false
